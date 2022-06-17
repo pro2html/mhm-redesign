@@ -1,0 +1,235 @@
+.intro-user-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 1 0 0;
+
+  &__avatar {
+    width: 98px;
+    height: 98px;
+    border-radius: var(--circle-border-radius);
+    overflow: hidden;
+    background: var(--background-secondary);
+    margin-right: 28px;
+    margin-bottom: 8px;
+
+    img {
+      width: 98px;
+      height: 98px;
+      object-fit: cover;
+    }
+  }
+
+  &__text-box {
+    flex: 0 0 auto;
+  }
+
+  &__text-head {
+    margin-bottom: 10px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+
+    &-holder {
+      display: flex;
+      align-items: center;
+    }
+
+    &-status {
+      color: var(--text-light);
+      font-size: var(--base-font-size-large);
+    }
+
+    .score {
+      font-weight: 500;
+      font-size: var(--base-font-size-xx-large);
+      line-height: 1.6;
+      color: var(--yellow-light-color);
+      margin-right: 5px;
+      display: inline;
+    }
+
+    i {
+      color: var(--yellow-light-color);
+      font-size: var(--base-font-size-large);
+      padding-bottom: 2px;
+    }
+  }
+
+  &__name {
+    font-size: var(--base-font-size-xxx-large);
+    line-height: 1.3333;
+    max-width: 200px;
+    word-break: break-word;
+
+    h1 {
+      font-size: var(--base-font-size-xx-large);
+      line-height: 1.3333;
+      color: var(--white-color);
+      font-weight: normal;
+      display: inline;
+
+      a {
+        display: block;
+        color: var(--white-color);
+
+        &:hover {
+          color: var(--info-color);
+        }
+
+        &:active {
+          color: var(--info-color-active);
+        }
+      }
+    }
+  }
+
+  &__status-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__status {
+    display: inline-block;
+    vertical-align: top;
+    color: var(--white-color);
+    padding: 2px 12px;
+    background: var(--info-color);
+    border-radius: 6px;
+    font-size: var(--base-font-size-large);
+    line-height: 24px;
+
+    &:hover {
+      color: var(--white-color);
+    }
+
+    &.rejected {
+      background: var(--rejected-color);
+    }
+
+    &.retracted {
+      background: var(--yellow-light-color);
+    }
+
+    &.employed {
+      background: var(--contract-offered-color);
+    }
+  }
+
+  &__contacts {
+    flex: 1 0 0;
+    max-width: 300px;
+    color: var(--white-color);
+    font-size: var(--base-font-size-small);
+    line-height: 1.6;
+    margin: 0 0 0 33px;
+    padding-left: 25px;
+    padding-right: 30px;
+    position: relative;
+    max-width: 100%;
+
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      width: 1px;
+      height: 100%;
+      min-height: 70px;
+      background: var(--info-color-dark);
+      content: '';
+    }
+
+    address {
+      font-style: normal;
+    }
+
+    a {
+      color: var(--white-color);
+
+      &:hover {
+        color: var(--info-color);
+      }
+
+      &:active {
+        color: var(--info-color-active);
+      }
+    }
+
+    .vacancy-title {
+      font-size: var(--heading-2);
+      margin-bottom: 10px;
+    }
+  }
+
+  .info-tooltip {
+    margin-left: 15px;
+    display: none;
+  }
+
+  @include mq($until: wide) {
+    .info-tooltip {
+      display: block;
+    }
+
+    &__contacts {
+      display: none;
+    }
+
+    &__name {
+      font-size: var(--base-font-size-xx-large);
+      line-height: 1.5;
+      
+      h1 {
+        font-size: var(--base-font-size-xx-large);
+        line-height: 1.5;
+      }
+    }
+  }
+
+  @include mq($until: tablet) {
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 24px;
+    flex: 0 0 100%;
+
+    &__text-head {
+      text-align: center;
+    }
+
+    &__rating {
+      &-holder {
+        justify-content: center;
+      }
+    }
+
+    &__name {
+      max-width: none;
+    }
+
+    &__avatar {
+      margin: 25px 0 8px;
+    }
+
+    .info-tooltip {
+      &__drop {
+        right: -85px;
+        left: auto;
+        transform: none;
+
+        &:before {
+          left: auto;
+          right: 85px;
+        }
+      }
+    }
+
+    &__status-wrap {
+      justify-content: center;
+    }
+  }
+}

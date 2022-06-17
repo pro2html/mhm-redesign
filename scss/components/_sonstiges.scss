@@ -1,0 +1,84 @@
+.sonstiges {
+  position: relative;
+  min-width: 0;
+  
+  &__content {
+    max-height: 730px;
+    overflow: auto;
+  }
+  
+  h3 {
+    font-weight: 600;
+  }
+  
+  @include mq($until: tablet) {
+    &__content {
+      max-height: none;
+    }
+  }
+}
+
+.files-list {
+  @extend %listreset;
+  padding-bottom: 8px;
+  
+  &__item {
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    font-size: var(--base-font-size-small);
+    line-height: 1.3333;
+  }
+  
+  &__title-wrap {
+    flex: 0 1 auto;
+    display: inline-flex;
+    min-width: 0;
+    max-width: 100%;
+  }
+  
+  &__title {
+    flex: 0 1 auto;
+    color: var(--info-color);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  &__extension {
+    color: var(--info-color);
+    flex: 0 0 auto;
+    margin-right: 8px;
+  }
+  
+  &__info {
+    color: var(--text-secondary);
+    flex: 0 0 auto;
+    margin-right: 8px;
+  }
+  
+  &__download {
+    color: var(--info-color);
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    
+    i {
+      font-size: var(--base-font-size);
+      margin-right: 4px;
+    }
+  }
+  
+  @include mq($until: tablet) {
+    &__item,
+    &__info {
+      display: block;
+    }
+    
+    &__info,
+    &__title-wrap {
+      margin-bottom: 4px;
+    }
+  }
+  
+}

@@ -1,0 +1,129 @@
+.transitions-menu {
+  position: relative;
+
+  h2 {
+    line-height: 1.5;
+    font-weight: 600;
+  }
+
+  hr {
+    border: 0;
+    margin: 0 0 8px;
+    padding: 0;
+    border-bottom: 1px solid var(--border-secondary);
+  }
+
+  &:hover {
+    .transitions-menu__dropdown {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__dropdown {
+    &.popup-content {
+      top: calc(100% + 10px);
+      width: 272px;
+      transform: none;
+
+      &:after,
+      &:before {
+        transform: none;
+      }
+
+      &:after {
+        position: absolute;
+        top: -10px;
+        height: 10px;
+        width: 100%;
+        content: '';
+      }
+
+      &:before {
+        top: -6px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 8.5px 9px 8.5px;
+        border-color: transparent transparent var(--white-color) transparent;
+        background: none;
+        margin: 0;
+      }
+    }
+  }
+
+  &__group {
+    @extend %listreset;
+
+    li {
+      padding-bottom: 8px;
+    }
+
+    a {
+      // New-style bridge
+      //color: var(--icon-color);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      &:hover {
+        color: var(--black-color);
+      }
+    }
+
+    & + h2 {
+      margin-top: 8px;
+    }
+
+    & i {
+      font-size: var(--base-font-size-x-large);
+      color: var(--info-color);
+      width: 20px;
+      margin-right: 10px;
+      display: inline-flex;
+      justify-content: center;
+    }
+
+    .text {
+      flex: 1 0 0;
+    }
+  }
+
+  @include mq($until: tvscreen) {
+    h2 {
+      font-size: var(--base-font-size-large);
+      margin-bottom: 0.2em;
+    }
+
+    &__group {
+      li {
+        padding-bottom: 4px;
+      }
+
+      .icon {
+        & i {
+          font-size: var(--base-font-size-large);
+        }
+      }
+    }
+  }
+
+  @include mq($until: tablet) {
+    width: 230px;
+
+    &__dropdown {
+      &.popup-content:before {
+        right: 12px;
+      }
+    }
+  }
+}
+
+ul.finalize {
+  a.event-reject span {
+    color: var(--red-300);
+  }
+  a.event-employ span {
+    color: var(--green-300);
+  }
+}

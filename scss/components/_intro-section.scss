@@ -1,0 +1,11 @@
+.application-panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  
+  @include mq($until: tablet) {
+    flex: 0 0 100%;
+    padding-top: 20px;
+    display: block;
+  }
+}

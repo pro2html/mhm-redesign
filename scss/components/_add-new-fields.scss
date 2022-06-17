@@ -1,0 +1,108 @@
+.rd-new-fields-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: auto;
+  background: var(--white-color);
+  z-index: 10;
+  border-radius: 8px 0 0 8px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  
+  .add-fields-active & {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  &__content {
+    padding: 10px 16px;
+  }
+  
+  .rd-btn-back {
+    margin: 10px 7px 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    color: var(--text-color);
+    transition: color 0.3s;
+    
+    i {
+      margin-right: 11px;
+      font-size: var(--base-font-size);
+    }
+    
+    span {
+      font-size: var(--base-font-size-large);
+      line-height: 2;
+    }
+    
+    &:hover {
+      color: var(--info-color);
+    }
+  }
+  
+  hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  &__list {
+    @extend %listreset;
+    
+    &-item {
+      margin-bottom: 5px;
+    }
+  }
+  
+  &__list-checkbox {
+    display: none;
+  }
+  
+  &__list-label {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px 11px 4px 13px;
+    border-radius: var(--input-border-radius);
+    cursor: pointer;
+    margin: 0;
+    
+    span {
+      flex: 1 0 0;
+      color: var(--background-dark);
+    }
+    
+    i {
+      margin-left: 10px;
+      visibility: hidden;
+      margin-top: 5px;
+    }
+    
+    &:hover {
+      background: var(--info-color);
+      
+      span,
+      i {
+        color: var(--white-color);
+      }
+    }
+  }
+  
+  &__list-checkbox:checked + &__list-label {
+    background: var(--background-muted);
+    
+    span {
+      color: var(--info-color);
+    }
+    
+    i {
+      visibility: visible;
+      color: var(--info-color);
+    }
+  }
+}

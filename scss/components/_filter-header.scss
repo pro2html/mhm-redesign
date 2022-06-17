@@ -1,0 +1,69 @@
+.intro-filters-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 1 0 0;
+  
+  &__results {
+    color: var(--white-color);
+    font-weight: 600;
+    font-size: var(--base-font-size-large);
+    line-height: 2;
+    margin-right: 24px;
+  }
+  
+  &__filter-opener {
+    display: inline-block;
+    vertical-align: top;
+    font-size: var(--base-font-size);
+    line-height: 1.7142;
+    position: relative;
+    color: var(--white-color);
+    background: none;
+    padding: 0 0 0 56px;
+    cursor: pointer;
+    border: 0;
+    
+    
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 1px;
+      content: '';
+      width: 44px;
+      height: 22px;
+      border-radius: 11px;
+      background: var(--background-secondary);
+      transition: all 0.3s;
+    }
+    
+    &:after {
+      position: absolute;
+      left: 2px;
+      top: 3px;
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-radius: var(--circle-border-radius);
+      background: var(--white-color);
+      z-index: 1;
+      transform: translate(0, 0);
+      transition: all 0.3s;
+    }
+    
+    &.active {
+      &:before {
+        background: var(--info-color);
+      }
+      
+      &:after {
+        transform: translate(21px, 0);
+      }
+    }
+  }
+  
+  @include mq($until: tablet) {
+    flex: 1 1 auto;
+    padding-top: 7px;
+  }
+}

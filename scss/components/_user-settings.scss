@@ -1,0 +1,23 @@
+.user-settings {
+  &__opener {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    background: var(--background-muted);
+    color: var(--icon-color);
+    border-radius: var(--circle-border-radius);
+    font-size: var(--base-font-size-large);
+
+    img {
+      display: block;
+    }
+  }
+
+  .popup-content {
+    min-width: 250px;
+  }
+}

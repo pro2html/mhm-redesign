@@ -1,0 +1,314 @@
+.applicants-table-section {
+  margin: -30px 29px 0;
+  
+  @include mq($until: desktop) {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.applicants-table-section__frame {
+  background: var(--white-color);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  position: relative;
+}
+
+.applicants-table-wrap {
+  overflow-x: auto;
+  position: relative;
+}
+
+.applicants-table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 991px;
+  
+  th {
+    color: var(--gray-500);
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border);
+    
+    .cell-holder {
+      display: block;
+    }
+  }
+  
+  &__check-cell {
+    width: 52px;
+    padding: 18px 36px 18px 18px;
+    position: relative;
+    
+    .edit {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 8px;
+      width: 21px;
+      height: 21px;
+      border-radius: var(--circle-border-radius);
+      background: var(--background-muted);
+      color: var(--info-color);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--base-font-size-small);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+    }
+  }
+  
+  &__id-cell,
+  &__applicant-cell,
+  &__vacancy-cell,
+  &__salary-cell,
+  &__status-cell,
+  &__average-cell,
+  &__interviews-cell,
+  &__last-update-cell {
+    padding: 14px 9px;
+  }
+  
+  &__sortable-head {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    padding-right: 15px;
+    cursor: pointer;
+    
+    &.desc {
+      &:before {
+        border-color: transparent transparent var(--info-color) transparent;
+      }
+    }
+    
+    &.asc {
+      &:after {
+        border-color: var(--info-color) transparent transparent transparent;
+      }
+    }
+    
+    &:before {
+      position: absolute;
+      top: 6px;
+      right: 0;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 4px 5px 4px;
+      border-color: transparent transparent var(--border) transparent;
+    }
+    
+    &:after {
+      position: absolute;
+      top: 12px;
+      right: 0;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 4px 0 4px;
+      border-color: var(--border) transparent transparent transparent;
+      transform: translateY(-50%);
+      margin-top: 5px;
+    }
+  }
+  
+  .applicants-table__id-cell {
+    padding-left: 0px;
+  }
+  
+  td.applicants-table__id-cell {
+    font-size: var(--base-font-size-small);
+    line-height: 1.3333;
+    color: var(--text-secondary);
+  }
+  
+  tr {
+    &.checked {
+      td {
+        background: var(--background-secondary);
+      }
+    }
+    
+    &:last-child {
+      td {
+        &:first-child {
+          border-bottom-left-radius: 8px;
+        }
+        
+        &:last-child {
+          border-bottom-right-radius: 8px;
+        }
+      }
+    }
+    td {
+      background: var(--white-color);
+      transition: background 0.3s;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    
+    &:hover {
+      .edit {
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      td {
+        background: var(--background-light);
+      }
+    }
+  }
+  
+  &__edit-info {
+    flex: 1 0 0;
+    min-width: 0;
+  
+    &-header {
+      display: inline-grid;
+      grid-template-columns: auto auto;
+      line-height: 14px;
+    }
+  }
+  
+  &__applicant {
+    display: flex;
+    flex-wrap: wrap;
+    
+    &-avatar {
+      width: 32px;
+      height: 32px;
+      margin-right: 12px;
+      border-radius: var(--circle-border-radius);
+      overflow: hidden;
+      background: var(--info-color);
+      color: var(--white-color);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    
+    &-name {
+      color: var(--info-color);
+      margin-right: 4px;
+      
+      &-counter {
+        color: var(---border-dark);
+      }
+    }
+  }
+  
+  &__additional-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  td.applicants-table__salary-cell,
+  td.applicants-table__interviews-cell,
+  td.applicants-table__last-update-cell {
+    font-size: var(--base-font-size-small);
+    line-height: 1.3333;
+  }
+  
+  td.applicants-table__vacancy-cell {
+    a {
+      color: var(--info-color);
+      
+      &:hover {
+        color: var(--info-color-active);
+      }
+    }
+  }
+  
+  &__user-checked {
+    color: var(--success-color);
+  }
+  
+  .applicants-table__check-cell {
+    width: 70px;
+  }
+  
+  .applicants-table__id-cell {
+    width: 40px;
+  }
+  
+  @include mq($until: desktop) {
+    .edit {
+      opacity: 1;
+      visibility: visible;
+      z-index: 2;
+    }
+    
+    .applicants-table__check-cell,
+    .applicants-table__id-cell,
+    .applicants-table__applicant-cell {
+      position: sticky;
+      left: 0;
+      z-index: 2;
+    }
+    
+    .applicants-table__check-cell {
+      left: 0;
+    }
+    
+    .applicants-table__id-cell {
+      left: 70px;
+    }
+    
+    .applicants-table__applicant-cell {
+      left: 110px;
+      min-width: 200px;
+      filter: drop-shadow(8px 0px 8px rgba(65, 72, 83, 0.1));
+      clip-path: inset(0px -16px 0px 0px);
+    }
+  }
+  
+  @include mq($until: tablet) {
+    .applicants-table__check-cell,
+    .applicants-table__id-cell,
+    .applicants-table__applicant-cell {
+      position: relative;
+      left: 0;
+      background: none;
+    }
+    
+    .applicants-table__applicant-cell {
+      filter: none;
+    }
+  }
+}
+
+.messages-count {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+  line-height: 14px;
+  
+  &__icon {
+    color: var(--info-color);
+    font-size: var(--base-font-size-large);
+    margin-right: 5px;
+  }
+  
+  &__counter {
+    font-size: var(--base-font-size-small);
+    color: var(--info-color);
+  }
+}

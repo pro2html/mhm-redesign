@@ -1,0 +1,54 @@
+.rating-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  
+  .rating {
+    color: var(--primary-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    .value {
+      font-weight: 500;
+      margin-right: 2px;
+    }
+    
+    i {
+      font-size: var(--base-font-size-small);
+    }
+    
+    img {
+      margin-top: -1px;
+    }
+  }
+  
+  .amount {
+    margin-left: 7px;
+    color: var(--info-color);
+    font-size: var(--base-font-size-small);
+    line-height: 1.3333;
+    
+    &:hover {
+      color: var(--base-link-color-hover);
+    }
+  }
+}
+
+.star-rating {
+  @extend %listreset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  
+  li {
+    margin: 0 4px;
+  }
+  
+  img {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+}

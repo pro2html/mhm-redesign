@@ -1,0 +1,17 @@
+.roles-title {
+  display: block;
+  margin-bottom: 8px;
+  
+  &__label {
+    margin-right: 4px;
+    color: var(--text-color);
+  }
+  
+  &__roles-number {
+    display: inline-block;
+    padding: 0 8px;
+    background: var(--background-muted);
+    border-radius: var(--btn-border-radius);
+    color: var(--text-color);
+  }
+}

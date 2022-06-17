@@ -1,0 +1,138 @@
+.popup-holder {
+  position: relative;
+
+  &:hover {
+    .popup-content {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.popup-content {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background: var(--background-inversed);
+  box-shadow: 0 4px 20px rgba(15, 39, 62, 0.15);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 15px 19px;
+  transform: translate(-50%, 16px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  z-index: 100;
+
+  &:before {
+    position: absolute;
+    top: -11px;
+    left: 50%;
+    content: '';
+    width: 12px;
+    height: 12px;
+    border: solid var(--border);
+    border-width: 1px 1px 0 0;
+    transform: rotate(-45deg) translateX(-50%);
+    background: var(--background-inversed);
+    margin-left: -2px;
+  }
+
+  &:after {
+    position: absolute;
+    top: -16px;
+    left: 0;
+    width: 100%;
+    content: '';
+    height: 16px;
+  }
+
+  &--pos-right {
+    left: auto;
+    right: -10px;
+    transform: translate(0, 16px);
+
+    &:before {
+      left: auto;
+      right: 18px;
+    }
+  }
+  
+  &--pos-semi-right {
+    left: auto;
+    right: -70px;
+    transform: translate(0, 16px);
+  
+    &:before {
+      left: auto;
+      right: 65px;
+    }
+  }
+
+  &--pos-left {
+    left: -10px;
+    right: auto;
+    transform: translate(0, 16px);
+
+    &:before {
+      left: 18px;
+      right: auto;
+    }
+  }
+  
+  &--pos-semi-left {
+    left: -60px;
+    right: auto;
+    transform: translate(0, 16px);
+  
+    &:before {
+      left: 74px;
+      right: auto;
+    }
+  }
+
+  hr {
+    margin-bottom: 12px;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+.popoup-settings {
+  h2 {
+    font-size: var(--base-font-size-large);
+    line-height: 1.5;
+    font-weight: 600;
+  }
+
+  .settings-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: var(--text-color);
+      display: -webkit-box;
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-box-align: center;
+      align-items: center;
+
+      &:hover {
+        color: var(--info-color);
+      }
+
+      &:active {
+        color: var(--info-color-active);
+      }
+    }
+  }
+}

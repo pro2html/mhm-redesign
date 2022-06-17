@@ -1,0 +1,88 @@
+.send-message {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .add-file {
+    flex: 0 0 auto;
+    border: 0;
+    padding: 0;
+    background: none;
+    width: auto;
+    height: auto;
+    margin-right: 20px;
+    
+    i {
+      font-size: var(--base-font-size-xx-large);
+      color: var(--info-color);
+    }
+  }
+  
+  .submit {
+    margin-left: 16px;
+  }
+  
+  &__field-wrap {
+    background: var(--white-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-secondary);
+    flex: 1 0 0;
+    position: relative;
+  }
+  
+  &__text-field {
+    padding: 16px 58px 16px 24px;
+    width: 100%;
+    display: block;
+    border: 0;
+    background: none;
+  }
+  
+  &__feed {
+    position: absolute;
+    bottom: 13px;
+    right: 16px;
+    
+    img {
+      display: block;
+    }
+  }
+  
+  &__recipient {
+    padding: 6px 0 0 45px;
+    
+    &:last-child {
+      margin-bottom: -15px;
+    }
+    
+    .sort-by {
+      margin-bottom: 0;
+    }
+  }
+  
+  @include mq($until: tablet) {
+    &__row {
+      justify-content: space-between;
+    }
+    
+    &__field-wrap {
+      order: -1;
+      flex: 0 0 100%;
+      margin: 0 0 10px;
+    }
+    
+    &__recipient {
+      padding-left: 30px;
+      
+      .sort-by__item {
+        margin-right: 0;
+      }
+    }
+    
+    .add-file {
+      margin-right: 0;
+    }
+  }
+}

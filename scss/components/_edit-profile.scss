@@ -1,0 +1,141 @@
+.edit-content {
+  &__holder {
+    padding: 27px 32px 40px;
+  }
+  
+  &__aside {
+    width: 380px;
+    margin-right: 24px;
+  }
+  
+  &__form {
+    min-width: 0;
+    
+    &-btns {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin: 0 -8px;
+      
+      > * {
+        margin: 0 8px 16px;
+      }
+    }
+    
+    label {
+      color: var(--text-color);
+      font-size: var(--base-font-size-small);
+      margin-bottom: 2px;
+    }
+    
+    &-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      
+      > * {
+        margin-left: 10px;
+      }
+    }
+  }
+  
+  &__form-section {
+    margin-bottom: 24px;
+    
+    &:last-child {
+      margin-bottom: 0;
+  
+      &__form-col-6,
+      &__form-col-12 {
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  &__form-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  &__form-col-6,
+  &__form-col-12 {
+    padding: 0 0 16px;
+    position: relative;
+  }
+  
+  &__form-col-6 {
+    width: 50%;
+    
+    &:first-child {
+      padding-right: 28px;
+    }
+    
+    &:last-child {
+      padding-left: 28px;
+    }
+  
+    &:last-child:first-child {
+      padding-left: 0;
+    }
+  }
+  
+  &__form-col-12 {
+    width: 100%;
+  }
+  
+  &__container {
+    position: relative;
+    border-radius: var(--container-border-radius);
+    border: 1px solid var(--border);
+    padding: 24px 32px 32px;
+    margin-bottom: 32px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__remove-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--text-secondary);
+    background: none;
+    border: 0;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  @include mq($until: desktop) {
+    &__form-col-6 {
+      width: 100%;
+      
+      &:first-child {
+        padding-right: 0;
+      }
+    
+      &:last-child {
+        padding-left: 0;
+      }
+    }
+    
+    &__holder {
+      padding: 20px 15px 30px;
+      display: block;
+    }
+  
+    &__aside {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @include mq($until: tablet) {
+  }
+}

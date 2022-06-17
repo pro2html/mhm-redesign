@@ -1,0 +1,1 @@
+$(".chosen-select").chosen({disable_search:!0});

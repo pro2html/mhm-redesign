@@ -1,0 +1,116 @@
+.alert {
+  padding: 12px 48px 12px 25px;
+  border-radius: var(--alert-border-radiius);
+  border-left: 4px solid;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  
+  &__icon {
+    margin-top: 1px;
+    margin-right: 17px;
+    flex: 0 0 14px;
+    color: var(--secondary-color);
+    
+    i {
+      font-size: var(--base-font-size);
+      -webkit-font-smoothing: antialiased;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+    }
+  }
+  
+  &__text {
+    flex: 1 0 0;
+    min-width: 0;
+  }
+  
+  
+  &__close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: none;
+    border: 0;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-size: var(--base-font-size-small);
+    
+    &:hover {
+      color: var(--primary-color);
+    }
+    
+    &:active {
+      color: var(--primary-color-active);
+    }
+  }
+  
+  h2 {
+    line-height: 1.55;
+    font-weight: 500;
+    margin: 0 0 8px;
+  }
+  
+  p {
+    &:last-child {
+      margin: 0;
+    }
+  }
+  
+  &.alert--secondary {
+    border-left-color: var(--secondary-color);
+    background: var(--secondary-color-light);
+  
+    .alert__icon {
+      color: var(--secondary-color);
+    }
+  }
+  
+  &.alert--primary {
+    border-left-color: var(--primary-color);
+    background: var(--primary-color-light);
+  
+    .alert__icon {
+      color: var(--primary-color);
+    }
+  }
+  
+  &.alert--success {
+    border-left-color: var(--success-color);
+    background: var(--success-color-light);
+  
+    .alert__icon {
+      color: var(--success-color);
+    }
+  }
+  
+  &.alert--warning {
+    border-left-color: var(--warning-color);
+    background: var(--warning-color-light);
+  
+    .alert__icon {
+      color: var(--warning-color);
+    }
+  }
+  
+  &.alert--danger {
+    border-left-color: var(--danger-color);
+    background: var(--danger-color-light);
+  
+    .alert__icon {
+      color: var(--danger-color);
+    }
+  }
+}

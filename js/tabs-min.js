@@ -1,0 +1,1 @@
+$(".js-tabs li a").on("click",function(s){s.preventDefault();let a=$(this).attr("href");$(this).hasClass("active")||($(this).closest(".js-tabs").find(".active").removeClass("active"),$(this).addClass("active")),$(a).siblings().removeClass("active"),$(a).addClass("active")});

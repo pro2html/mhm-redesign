@@ -1,0 +1,36 @@
+.sortable-list {
+  column-count: 2;
+  column-gap: 16px;
+  
+  li {
+    padding-left: 26px;
+    margin-bottom: 8px;
+    position: relative;
+    cursor: move;
+    border: 1px solid transparent;
+    
+    &:before {
+      position: absolute;
+      top: 10px;
+      left: 6px;
+      width: 12px;
+      height: 1px;
+      content: '';
+      background: var(--background-secondary);
+      box-shadow: 0 4px 0 var(--background-secondary), 0 8px 0 var(--background-secondary);
+    }
+    
+    &.sortable-chosen {
+      &.ghost {
+        background: var(--background-light);
+        border: 1px dashed var(--border-dark);
+        border-radius: 4px;
+        
+        label {
+          background: none;
+          color: transparent;
+        }
+      }
+    }
+  }
+}

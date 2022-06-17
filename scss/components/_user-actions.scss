@@ -1,0 +1,49 @@
+.new-style .user-actions {
+  @extend %listreset;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+
+  > li {
+    padding: 0 8px;
+    border-left: 1px solid var(--border);
+
+    &:last-child {
+      border-right: 1px solid var(--border);
+    }
+
+    > a {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      height: 24px;
+      font-size: var(--base-font-size-x-large);
+      color: var(--icon-color);
+      transition: all 0.3s;
+      position: relative;
+
+      .fa-search {
+        font-size: var(--base-font-size-large);
+      }
+
+      &:hover {
+        color: var(--info-color);
+      }
+
+      &:active {
+        color: var(--info-color-active);
+      }
+    }
+  }
+
+
+  @include mq($until: tablet) {
+    margin-left: 10px;
+
+    > li {
+      padding: 0 6px;
+    }
+  }
+}
+
+

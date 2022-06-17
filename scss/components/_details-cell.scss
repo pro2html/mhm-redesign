@@ -1,0 +1,16 @@
+.details-cell {
+  margin: 0 0 22px;
+  display: grid;
+  grid-template-columns: 123px 1fr;
+  grid-gap: 8px 20px;
+  
+  dt {
+    color: var(--border-dark);
+  }
+  
+  dd {
+    margin: 0;
+    display: block;
+    font-weight: 500;
+  }
+}

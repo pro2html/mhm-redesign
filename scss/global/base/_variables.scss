@@ -1,0 +1,190 @@
+:root {
+  // base palette
+  --blue-100: #D3EAF8;
+  --blue-200: #D8EAFB;
+  --blue-300: #53AEE2;
+  --blue-400: #2189C4;
+  --blue-500: #1A6B99;
+
+  --orange-50:  #FFFAEF;
+  --orange-100: #F7E0D4;
+  --orange-200: #E8A27D;
+  --orange-300: #DB6E34;
+  --orange-400: #AD501F;
+  --orange-500: #823C17;
+
+  --red-50:  #FFF1F0;
+  --red-100: #FDCED1;
+  --red-200: #F9858B;
+  --red-300: #F5222D;
+  --red-400: #C30913;
+  --red-500: #92070E;
+
+  --green-50:  #F6FFED;
+  --green-100: #DFF9D2;
+  --green-200: #AFF08E;
+  --green-300: #52C41A;
+  --green-400: #429E15;
+  --green-500: #2F710F;
+
+  --gray-100: #F5F7F9;
+  --gray-200: #DFE4EC;
+  --gray-300: #8C99A6;
+  --gray-400: #647382;
+  --gray-500: #424C56;
+
+  // other colors
+  --yellow-light-color: #FADB14;
+  --violet-color: #9428EA;
+  --white-color: #fff;
+  --black-color: #000;
+
+  --green-icon: #1ACA8E;
+  --light-green-icon: #92BE99;
+  --turquoise-icon: #419F9E;
+  --orange-icon: #DB8146;
+  --yellow-icon: #E1C819;
+  --light-blue-icon: #85C3D7;
+
+  // info set
+  --info-color: var(--blue-300);
+  --info-color-hover: var(--blue-200);
+  --info-color-active: var(--blue-400);
+  --info-color-light: var(--blue-100);
+  --info-color-dark: var(--blue-500);
+
+  // warning set
+  --primary-color: var(--orange-300);
+  --primary-color-hover: var(--orange-200);
+  --primary-color-active: var(--orange-400);
+  --primary-color-light: var(--orange-100);
+  --primary-color-lightest: var(--orange-50);
+  --primary-color-dark: var(--orange-500);
+
+  // success set
+  --success-color: var(--green-300);
+  --success-color-hover: var(--green-200);
+  --success-color-active: var(--green-400);
+  --success-color-light: var(--green-100);
+  --success-color-lightest: var(--green-50);
+  --success-color-dark: var(--green-500);
+
+  // danger set
+  --danger-color: var(--red-300);
+  --danger-color-hover: var(--red-200);
+  --danger-color-active: var(--red-400);
+  --danger-color-light: var(--red-100);
+  --danger-color-lightest: var(--red-50);
+  --danger-color-dark: var(--red-500);
+
+  // secondary set
+  --secondary-color: var(--gray-300);
+  --secondary-color-hover: var(--gray-200);
+  --secondary-color-active: var(--gray-400);
+  --secondary-color-light: var(--gray-100);
+  --secondary-color-lightest: var(--gray-50);
+  --secondary-color-dark: var(--gray-500);
+
+  // text
+  --text-color: var(--gray-500);
+  --text-lighten: var(--gray-400);
+  --text-secondary: var(--gray-300);
+  --text-light: var(--gray-100);
+  --text-inversed: var(--white-color);
+  --title-color: var(--gray-500);
+
+  // links & nav links
+  --link-color: var(--gray-400);
+  --link-color-hover: var(--blue-200);
+  --link-color-hover-dark: var(--blue-300);
+  --link-color-pressed: var(--blue-400);
+  --link-color-current: var(--black-color);
+
+  // border
+  --border: var(--gray-200);
+  --border-secondary: var(--gray-100);
+  --border-hover: var(--blue-200);
+  --border-inversed: var(--white-color);
+  --border-dark: var(--gray-300);
+
+  // background
+  --background: var(--gray-300);
+  --background-secondary: var(--gray-200);
+  --background-light: var(--gray-100);
+  --background-inversed: var(--white-color);
+  --background-muted: var(--blue-100);
+  --background-dark: var(--gray-500);
+
+  // box-shadow
+  --box-shadow-inset: inset 0px -1px 0px var(--background-secondary);
+
+  //status
+  --rejected-color: var(--red-300);
+  --rejected-bg-color: var(--red-50);
+  --contract-offered-color: var(--green-300);
+  --contract-offered-bg-color: var(--green-50);
+  --new-color: var(--gray-400);
+  --new-bg-color: var(--gray-100);
+  --interview-color: var(--orange-300);
+  --interview-bg-color: var(--orange-50);
+
+  // headings
+  --heading-1: 1.2857rem; // 18px
+  --heading-2: 1.1428rem; // 16px
+  --heading-3: 1rem;      // 14px
+  --heading-4: 0.8571rem; // 12px
+
+  // font sizes
+  --base-font-size-xxx-large:1.7142rem;  // 24px
+  --base-font-size-xx-large: 1.4285rem;  // 20px
+  --base-font-size-x-large:  1.2857rem;  // 18px
+  --base-font-size-large:    1.1428rem;  // 16px
+  --base-font-size:          1rem;       // 14px
+  --base-font-size-small:    0.8571rem;  // 12px
+  --base-font-size-x-small:  0.7142rem;  // 10px
+  --base-line-height:        1.7143;
+  --base-font-family:        'Nunito', Arial, Helvetica, sans-serif;
+  --heading-font-family:     'Nunito', Arial, Helvetica, sans-serif;
+
+  --base-min-width: 320px;
+
+  //icons
+  --icon-color: var(--gray-500);
+  --icon-color-secondary: var(--gray-300);
+  --icon-color-light: var(--gray-200);
+  --icon-color-white: var(--white-color);
+
+  //border-radius
+  --circle-border-radius: 50%;
+  --btn-border-radius: 4px;
+  --input-border-radius: 4px;
+  --input-border-radius-small: 2px;
+  --alert-border-radiius: 8px;
+  --datepicker-border-radius: 12px;
+  --datepicker-btn-border-radius: 8px;
+}
+
+/// Breakpoint list
+///
+/// Name your breakpoints in a way that creates a ubiquitous language
+/// across team members. It will improve communication between
+/// stakeholders, designers, developers, and testers.
+///
+/// @type Map
+/// @link https://github.com/sass-mq/sass-mq#seeing-the-currently-active-breakpoint Full documentation and examples
+$mq-breakpoints: (
+  // Base device classes
+        mobile:          321px,
+        tablet:          768px,
+        desktop:         992px,
+        wide:            1200px,
+        widescreenLarge: 1280px,
+        tvscreen:        1920px,
+        tvscreenLarge:   2220px,
+
+  // Tweakpoints
+        mobileLandscape: 500px
+);
+
+// Show active breakpoint in top right corner of viewport
+$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide, tvscreen);

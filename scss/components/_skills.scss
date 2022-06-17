@@ -1,0 +1,31 @@
+.skills-list {
+  @extend %listreset;
+  
+  li {
+    margin-bottom: 10px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__label {
+    display: block;
+    margin-bottom: 4px;
+    color: var(---border-dark);
+    
+    span {
+      margin-right: 8px;
+    }
+    
+    b {
+      color: var(--text-color);
+    }
+  }
+  
+  &__progressbar {
+    background: linear-gradient(270deg, var(--primary-color-hover) 0%, var(--primary-color) 100%);
+    height: 5px;
+    border-radius: 3px;
+  }
+}

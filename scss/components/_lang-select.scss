@@ -1,0 +1,19 @@
+.lang-select {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  font-size: var(--base-font-size-small);
+  line-height: 1.3333;
+  
+  a {
+    color: var(--info-color);
+    font-size: var(--base-font-size-small);
+    line-height: 1.3333;
+    margin-left: 8px;
+    
+    &.active-language {
+      color: var(--background-dark);
+      pointer-events: none;
+    }
+  }
+}

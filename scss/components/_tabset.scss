@@ -1,0 +1,120 @@
+.tabs-scroll {
+  overflow: hidden;
+  overflow-x: auto;
+  margin-bottom: -11px;
+  
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  
+  .tabs-navigation & {
+    overflow: visible;
+    overflow-x: auto;
+    margin: 0;
+  }
+}
+
+.tabs-holder {
+  margin: 0 -15px;
+  position: relative;
+  
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 15px;
+    background: linear-gradient(to right, rgba(226,231,238,1) 0%,rgba(226,231,238,0) 100%);
+    content: '';
+    z-index: 1;
+  }
+  
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 15px;
+    background: linear-gradient(to right, rgba(226,231,238,0) 0%,rgba(226,231,238,1) 100%);
+    content: '';
+    z-index: 1;
+  }
+  
+  &.tabs-navigation {
+    padding: 0 32px;
+    margin: 0;
+    border-bottom: 1px solid var(--border);
+    
+    &:before {
+      background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+    }
+    
+    &:after {
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    }
+  }
+  
+  @include mq($until: tablet) {
+    &.tabs-navigation {
+      padding: 0;
+    }
+  }
+}
+
+.tabset {
+  @extend %listreset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  overflow-x: auto;
+  width: 100%;
+  
+  li {
+    margin: 0 14px;
+  }
+  
+  a {
+    font-size: var(--base-font-size);
+    line-height: 1.7142;
+    font-weight: 500;
+    display: block;
+    position: relative;
+    color: var(--text-secondary);
+    padding-bottom: 11px;
+    
+    &.active {
+      color: var(--text);
+      
+      &:before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        content: '';
+        border-bottom: 3px solid var(--primary-color);
+      }
+    }
+  }
+  
+  &.tabset_aligned-left {
+    justify-content: flex-start;
+    float: left;
+  }
+  
+  .tabs-navigation & {
+    a {
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+  }
+  
+  @include mq($until: tablet) {
+    justify-content: flex-start;
+    
+    a {
+      font-size: var(--base-font-size);
+    }
+  }
+}

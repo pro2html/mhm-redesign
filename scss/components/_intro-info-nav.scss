@@ -1,0 +1,44 @@
+.intro-info-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 0;
+  padding-top: 9px;
+
+  a {
+    color: var(--white-color);
+  }
+
+  &__prev,
+  &__next {
+    color: var(--white-color);
+    
+    i {
+      font-size: var(--base-font-size-x-large);
+    }
+    
+    &:hover {
+      color: var(--info-color);
+    }
+    
+    &:active {
+      color: var(--info-color-active);
+    }
+  }
+  
+  &__counter {
+    font-size: var(--base-font-size-large);
+    line-height: 1.5;
+    color: var(--white-color);
+    margin: 0 18px;
+    white-space: nowrap;
+  }
+  
+  @include mq($until: tablet) {
+    position: static;
+    padding: 16px 0;
+    border-top: 1px solid var(--border-dark);
+    border-bottom: 1px solid var(--border-dark);
+    margin-bottom: 16px;
+  }
+}

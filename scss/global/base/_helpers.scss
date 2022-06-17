@@ -1,0 +1,39 @@
+//indents
+
+.h_ml-16 {
+  margin-left: 16px;
+}
+
+.h_ml-24 {
+  margin-left: 24px;
+}
+
+.h_ml-28 {
+  margin-left: 28px;
+  
+  @include mq($until: tablet) {
+    margin-left: 16px;
+  }
+}
+
+.h_mb-16 {
+  margin-bottom: 16px;
+}
+
+.h_mb-25 {
+  margin-bottom: 25px;
+}
+
+// backgrounds
+
+.h_bg-green {
+  background: var(--green-400);
+}
+
+.h_bg-yellow {
+  background: var(--primary-color-hover);
+}
+
+.h_bg-violet {
+  background: var(--violet-color);
+}

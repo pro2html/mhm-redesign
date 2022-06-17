@@ -1,0 +1,92 @@
+.event-item {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  
+  &__header {
+    position: relative;
+    padding-right: 38px;
+    margin-bottom: 24px;
+  }
+  
+  &__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  &__title {
+    display: block;
+    color: var(--info-color);
+    margin-bottom: 8px;
+    font-size: var(--base-font-size);
+    line-height: 1.1428;
+  }
+  
+  &__date {
+    font-size: var(--base-font-size-small);
+    line-height: 1.3333;
+    color: var(--text-color);
+    margin-right: 12px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  &__participants {
+    display: inline-flex;
+    vertical-align: top;
+    align-items: center;
+    color: var(--info-color);
+    
+    &:hover {
+      color: var(--base-link-color-hover);
+    }
+    
+    &-number {
+      font-weight: 600;
+      font-size: var(--base-font-size);
+      line-height: 1.1428;
+      margin-right: 3px;
+    }
+    
+    i {
+      font-size: var(--base-font-size);
+      margin-top: -1px;
+    }
+  }
+  
+  &__delete {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: var(--background-secondary);
+    color: var(--text-color);
+    border-radius: var(--circle-border-radius);
+  }
+  
+  &__pinned {
+    font-weight: 600;
+    font-size: var(--base-font-size);
+    line-height: 1.7142;
+    color: var(--text-color);
+  }
+  
+  &__invite-status {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: auto;
+    padding: 2px 8px;
+    border-radius: 8px;
+    background: var(--primary-color-lightest);
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: var(--base-font-size-small);
+    line-height: 2;
+  }
+}

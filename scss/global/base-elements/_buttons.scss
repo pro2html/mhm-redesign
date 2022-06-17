@@ -1,0 +1,210 @@
+.new-style .btn {
+  display: inline-flex;
+  vertical-align: top;
+  align-items: center;
+  border-radius: 4px;
+  padding: 7px 16px;
+  color: var(--white-color);
+  background: none;
+  transition: all 0.3s;
+  border: 1px solid;
+  cursor: pointer;
+
+  &:disabled,
+  &.disabled {
+    background: var(--background-secondary) !important;
+    cursor: default;
+  }
+  
+  // buttons styles
+  &.btn-info {
+    background: var(--info-color);
+    border-color: var(--info-color);
+  
+    &:hover {
+      border-color: var(--info-color-hover);
+      background: var(--info-color-hover);
+    }
+  
+    &:active {
+      border-color: var(--info-color-active);
+      background: var(--info-color-active);
+    }
+  }
+  
+  &.btn-secondary {
+  
+  }
+  
+  &.btn-success {
+    background: var(--success-color);
+    border-color: var(--success-color);
+  
+    &:hover {
+      border-color: var(--success-color-hover);
+      background: var(--success-color-hover);
+    }
+  
+    &:active {
+      border-color: var(--success-color-active);
+      background: var(--success-color-active);
+    }
+  }
+  
+  &.btn-danger {
+  
+  }
+  
+  &.btn-primary {
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    
+    &:hover {
+      border-color: var(--primary-color-hover);
+      background: var(--primary-color-hover);
+    }
+    
+    &:active {
+      border-color: var(--primary-color-active);
+      background: var(--primary-color-active);
+    }
+  }
+  
+  &.btn-light {
+  
+  }
+  
+  &.btn-dark {
+  
+  }
+  
+  // buttons outlined
+  
+  &.btn-outline-info {
+    background: transparent;
+    border-color: var(--info-color);
+    color: var(--info-color);
+    
+    &:hover {
+      background: none;
+      border-color: var(--info-color-hover);
+      color: var(--info-color-hover);
+    }
+    
+    &:active {
+      background: none;
+      border-color: var(--info-color-active);
+      color: var(--info-color-active);
+    }
+  }
+  
+  &.btn-outline-secondary {
+    background: none;
+    border: 1px solid var(--border-secondary);
+    color: var(--secondary-color-dark);
+  
+    &:hover {
+      background: none;
+      color: var(--secondary-color-active);
+    }
+  }
+  
+  &.btn-outline-success {
+    background: none;
+  }
+  
+  &.btn-outline-danger {
+    background: none;
+  }
+  
+  &.btn-outline-primary {
+    background: none;
+    border: 1px solid var(--primary-color);
+    
+    &:hover {
+      background: none;
+      border-color: var(--primary-color-hover);
+      color: var(--white-color);
+    }
+    
+    &:active {
+      background: none;
+      border-color: var(--primary-color-active);
+      color: var(--primary-color-active);
+    }
+  }
+  
+  &.btn-outline-light {
+    background: none;
+    border: 1px solid var(--white-color);
+  
+    &:hover {
+      background: none;
+      color: var(--white-color);
+    }
+  }
+  
+  &.btn-outline-dark {
+  
+  }
+  
+  &.btn-small {
+    padding: 4px 8px;
+  }
+  
+  .icon {
+    margin-right: 12px;
+    min-width: 15px;
+    min-height: 12px;
+    flex: 0 0 auto;
+    position: relative;
+    
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--white-color);
+      font-size: var(--base-font-size-large);
+    }
+  }
+  
+  .text {
+    flex: 1 0 0;
+  }
+  
+  &.submit {
+    padding: 11px 18px;
+    
+    .icon {
+      margin-right: 6px;
+      
+      img {
+        display: block;
+      }
+    }
+  }
+}
+
+.show-more {
+  color: var(--info-color);
+}
+
+.add-btn {
+  display: inline-flex;
+  padding: 16px 22px;
+  height: 52px;
+  background: var(--white-color);
+  border: 1px dashed var(--border);
+  box-sizing: border-box;
+  border-radius: 8px;
+  line-height: 20px;
+  color: var(--info-color);
+  cursor: pointer;
+  
+  &__icon {
+    font-size: var(--base-font-size-large);
+    margin-right: 16px;
+    color: var(--info-color);
+  }
+}

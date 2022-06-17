@@ -1,0 +1,27 @@
+.application-actions {
+  @extend %listreset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: var(--base-font-size-x-large);
+  
+  li {
+    margin-left: 16px;
+    
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  
+  a {
+    color: var(--white-color);
+    
+    &:hover {
+      color: var(--info-color);
+    }
+    
+    &:active {
+      color: var(--info-color-active);
+    }
+  }
+}

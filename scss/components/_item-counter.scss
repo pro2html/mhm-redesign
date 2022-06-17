@@ -1,0 +1,21 @@
+.item-counter {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--primary-color);
+  width: 16px;
+  height: 16px;
+  color: var(--white-color);
+  line-height: 16px;
+  text-align: center;
+  border-radius: var(--circle-border-radius);
+  font-size: var(--base-font-size-small);
+
+  &.dark-background {
+    background: var(--secondary-color-dark);
+  }
+  
+  .user-actions & {
+    right: -8px;
+  }
+}

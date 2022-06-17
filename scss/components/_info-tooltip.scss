@@ -1,0 +1,58 @@
+.info-tooltip {
+  position: relative;
+  
+  > i {
+    color: var(--white-color);
+    font-size: var(--base-font-size-x-large);
+  }
+  
+  &__drop {
+    width: 352px;
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: var(--white-color);
+    padding: 18px 22px;
+    border-radius: 8px;
+    border: 1px solid var(--border-dark);
+    font-size: var(--base-font-size-small);
+    line-height: 1.6666;
+    z-index: 1000;
+    box-shadow: 0 4px 24px rgba(74, 85, 104, 0.07);
+    display: none;
+    
+    address {
+      font-style: normal;
+    }
+    
+    &:before {
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      margin-left: -9px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 8.5px 9px 8.5px;
+      border-color: transparent transparent var(--white-color) transparent;
+    }
+    
+    p {
+      margin: 0;
+    }
+  }
+  
+  &:hover {
+    .info-tooltip__drop {
+      display: block;
+    }
+  }
+  
+  @include mq($until: tablet) {
+    &__drop {
+      width: 320px;
+    }
+  }
+}

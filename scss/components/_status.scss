@@ -1,0 +1,28 @@
+.status-item {
+  display: inline-block;
+  vertical-align: top;
+  padding: 2px 8px;
+  border-radius: var(--btn-border-radius);
+  font-size: var(--base-font-size-small);
+  line-height: 1.3333;
+  
+  &.rejected {
+    background: var(--rejected-bg-color);
+    color: var(--rejected-color);
+  }
+  
+  &.contract-offered {
+    background: var(--contract-offered-bg-color);
+    color: var(--contract-offered-color);
+  }
+  
+  &.new {
+    background: var(--new-bg-color);
+    color: var(--new-color);
+  }
+  
+  &.interview {
+    background: var(--interview-bg-color);
+    color: var(--interview-color);
+  }
+}
