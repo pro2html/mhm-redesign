@@ -1,0 +1,1222 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    title MHM-HR Applications
+
+    / Fonts
+    link rel="preconnect" href="https://fonts.gstatic.com"
+    link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"
+
+    / Styles
+    link rel="stylesheet" href="css/normalize.css" media="all"
+    link rel="stylesheet" href="css/bootstrap-grid.css" media="all"
+    link rel="stylesheet" href="css/chosen.min.css" media="all"
+    link rel="stylesheet" href="css/all.css" media="all"
+    link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"
+
+  body
+    header.header.new-style
+      .logo-wrap
+        a.logo href="/"
+          img id="corporate-logo" src="images/wide-logo.jpeg" alt="Corporate logo"
+      .header-info
+        .user-settings.popup-holder
+          .user-settings__opener
+            i class="fas fa-user-cog"
+            span.item-counter 5
+          div.popup-content.js-popup-content
+            span.roles-title
+              span.roles-title__label You have
+              span.roles-title__roles-number 5 roles
+            select class="chosen-select drop-left"
+              option Admin
+              option Admin
+
+        ul.actions.user-actions
+          li
+            a.icon.icon-search.js-search-opener href="#"
+              i class="fas fa-search"
+            div.search-drop.js-search-drop
+              form
+                div.search-drop__content
+                  div.search-drop__input-wrap
+                    i class="fas fa-search search-drop__field-icon"
+                    input type="text" placeholder="Search" class="search-drop__text-field"
+                    button.search-drop__submit
+                      i class="fas fa-chevron-down"
+                  a.search-drop__close.js-search-opener href="#"
+                    i class="fas fa-times"
+
+          li.popup-holder
+            a.icon.icon-settings href="#"
+              i class="fas fa-cog"
+            div.popup-content.popup-content--pos-right.popoup-settings
+              h2 Administrations
+              ul.settings-menu
+                li
+                  a href="#" Application form
+                li
+                  a href="#" Assets
+                li
+                  a href="#" Configutation Import/Export
+                li
+                  a href="#" Custom value
+                li
+                  a href="#" Process duration
+                li
+                  a href="#" Publication Channels
+                li
+                  a href="#" Question Categories
+                li
+                  a href="#" Question
+                li
+                  a href="#" Security logs
+                li
+                  a href="#" System Configuration
+                li
+                  a href="#" Templates
+                li
+                  a href="#" User Translations
+                li
+                  a href="#" Users
+          li
+            a.icon.icon-notifications href="#"
+              i class="far fa-bell"
+          li
+            a.icon.icon-notifications href="#"
+              i class="fas fa-question"
+
+        .user-logo.popup-holder
+          div.user-logo__text DR
+          div class="popup-content popup-content--pos-right user-popup"
+            div.user-popup__header
+              span.user-popup__brand-name MHMeRECRUTING
+              span.user-popup__user-name Prof. Dr. Hg. Admin. Admin
+              div.lang-select
+                a href="#" class="active-language" DE
+                a href="#" ENG
+            hr
+            div.user-popup__row
+              a.user-popup__link href="#"
+                span.user-popup__link-icon
+                  i class="far fa-user-circle"
+                span.user-popup__link-title Profile
+            div.user-popup__row
+              a.user-popup__link href="#"
+                span.user-popup__link-icon
+                  i class="fas fa-cog"
+                span.user-popup__link-title Settings
+            hr
+            div.user-popup__row
+              a.user-popup__link href="#"
+                span.user-popup__link-icon
+                  i class="fas fa-sign-out-alt"
+                span.user-popup__link-title Log out
+              span.user-popup__log-counter 18 min
+      #application-menu
+        a.nav-mobile-opener href="#"
+          i class="fas fa-bars"
+        div.nav-mobile-overlay
+        div.nav-wrap
+          a.nav-mobile-close
+            i class="fas fa-times"
+          span.nav-mobile-logo
+            img src="images/wide-logo.jpeg" alt="Corporate logo"
+          span.nav-title Menu
+          ul.nav
+            li.dropdown
+              a href="#show-mobile-nav"
+                span Dashboard
+                span class="fas fa-chevron-down drop-arrow"
+              ul.sub-nav.popup-content
+                li
+                  a href="/staff/job_applications" Applications second
+                li
+                  a href="/staff/messages" Communication second
+            li
+              a href="#show-mobile-nav" Personnel
+            li
+              a href="#show-mobile-nav" Personnel 2
+            li.dropdown.current
+              a href="#show-mobile-nav"
+                span Applications
+                span class="fas fa-chevron-down drop-arrow"
+              ul.sub-nav.popup-content
+                li
+                  a href="/staff/job_applications" Applications
+                li
+                  a href="/staff/messages" Communication
+            li
+              a href="/staff/pool_applications" Talent Pool
+            li.dropdown
+              a href="/staff/events"
+                span Events
+                span class="fas fa-chevron-down drop-arrow"
+              ul.sub-nav.popup-content
+                li
+                  a href="/staff/job_applications" Applications third item
+                li
+                  a href="/staff/messages" Communication third item
+
+    main.main
+      .intro-info.new-style
+        .content-holder
+          .intro-user-info
+            .intro-user-info__avatar.portrait-image
+              img src="images/avatar02.jpg" alt="User avatar"
+            .intro-user-info__text-box
+              .intro-user-info__text-head
+                .intro-user-info__name
+                  h1 Alice, James
+                .intro-user-info__rating-holder
+                  .intro-user-info__rating
+                    .score 5
+                    i class="fas fa-star"
+                  span.intro-user-info__rating-status Standard
+              .intro-user-info__status-wrap
+                a.intro-user-info__status href="#" Contract offered
+                .info-tooltip
+                  i class="fas fa-info-circle"
+                  .info-tooltip__drop
+                    address Musterstraße 1, Berlin
+                    div +49 970 192 381
+                    div newman.james@gmail.com
+                    p Application: Webdeveloper Ruby on Rails (f/md/d)
+            .intro-user-info__contacts
+              address Musterstraße 1, Berlin
+              a href="tel:49970192381" +49 970 192 381
+              a href="mailto:newman.james@gmail.com" newman.james@gmail.com
+              p
+                span Application:
+                a href="#" Webdeveloper Ruby on Rails (f/md/d)
+
+
+          .intro-actions-col
+            .intro-actions
+              ul
+                li
+                  a class="detail" title="Details" href="/staff/job_applications/27"
+                    img src="images/icons/list-view.svg"
+                li
+                  a class="reminder" title="Reminder" href="/staff/reminders/new?id=27&amp;type=job_applications%2Fstandard"
+                    i class="fas fa-stopwatch"
+              .h_ml-24
+                a class="edit btn btn-outline-light" title="Edit" href="/staff/job_applications/27/edit"
+                  span.icon
+                    i class="fas fa-pen"
+                  span.text Edit Profile
+              .transitions-menu.h_ml-16
+                a class="actions-opener toggle-link btn btn-primary" href="#"
+                  span.icon
+                    i class="fas fa-chevron-down d-none d-md-block"
+                    i class="fas fa-plus d-block d-md-none"
+                  span.text Actions
+                .transitions-menu__dropdown.popup-content
+                  .transition-sections
+                    h2 Status
+                    ul.transitions-menu__group
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-times"
+                          span.text Reject
+                      li
+                        a href="#"
+                          span.icon
+                            i class="far fa-envelope"
+                          span.text Send E-Mail to applicant
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-user-edit"
+                          span.text Mass tagging
+                    hr
+                    ul.transitions-menu__group
+                      li
+                        a href="#"
+                          span.icon
+                            i class="far fa-user-circle"
+                          span.text Request manager review
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-redo"
+                          hone-alt
+                          span.text Revise review
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-microphone-alt"
+                          span.text Create interview
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-plus"
+                          span.text Invite to assessment center
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-file-contract"
+                          span.text Offer contract
+                    hr
+                    ul.transitions-menu__group
+                      li
+                        a href="#"
+                          span.icon
+                            i class="far fa-plus-square"
+                          span.text Create talent pool application
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-retweet"
+                          span.text Rehang
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-reply"
+                          span.text Retract application
+
+                    h2 Council review
+                    ul.transitions-menu__group
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-times"
+                          span.text Unlist as competitor
+
+                    h2 Requested documents
+                    ul.transitions-menu__group
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-upload"
+                          span.text Upload documents
+
+                    h2 Disabilities
+                    ul.transitions-menu__group
+                      li
+                        a href="#"
+                          span.icon
+                            i class="far fa-minus-square"
+                          span.text Remove as Competitor
+
+                    h2 Feedback
+                    ul.transitions-menu__group
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-plus"
+                          span.text New
+
+            .intro-info-nav
+              #previous-job-application
+                a.intro-info-nav__prev.action-previous title="Previous" href="#"
+                  i class="fas fa-arrow-left"
+              span.intro-info-nav__counter Profile 1/35
+              #next-job-application
+                a.intro-info-nav__next.action-next title="Next" href="#"
+                  i class="fas fa-arrow-right"
+            ul.other-users
+              li.other-users__item.h_bg-green
+                .other-users__item-icon
+                  img src="images/avatar.jpg" alt="User avatar"
+                  span.icon-category
+                    img src="images/icons/icon-eye.svg" alt="Avatar icon"
+                .other-users__item-title Observer
+                .other-users__dropdown
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-eye.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-eye.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-eye.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+
+              li.other-users__item.h_bg-yellow
+                .other-users__item-icon
+                  img src="images/avatar.jpg" alt="User avatar"
+                  span.icon-category
+                    img src="images/icons/icon-user.svg" alt="Avatar icon"
+                .other-users__item-title Recruiter
+                .other-users__dropdown
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-user.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-user.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-user.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+
+              li.other-users__item.h_bg-violet
+                .other-users__item-icon
+                  img src="images/avatar.jpg" alt="User avatar"
+                  span.icon-category
+                    img src="images/icons/icon-xy.svg" alt="Avatar icon"
+                .other-users__item-title Observer
+                .other-users__dropdown
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-xy.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-xy.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-xy.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+
+      .content-section.new-style
+        aside.aside
+          .content-box
+            .content-box__header
+              h2 Details
+            .content-box__body
+              dl.details-cell
+                dt Desired Salary
+                dd 65.000 EUR
+                dt Channel
+                dd Homepage, listed since 07.11.2019
+                dt Period of notice
+                dd 3 Months
+                dt Company
+                dd Agency
+                dt Manager
+                dd Philipp Reik
+                dt Recruiter
+                dd Philipp Reik
+              a.show-more href="#" Show more
+
+          .content-box
+            .content-box__header
+              h2 Feedback
+            .content-box__body
+              ul.feedback-list
+                li
+                  .title Overall impression of the application
+                  .rating-box
+                    span.rating
+                      span.value 4
+                      i class="fas fa-star"
+                    a.amount href="#" (679)
+                li
+                  .title Overall impression of the application
+                  .rating-box
+                    span.rating
+                      span.value 4
+                      i class="fas fa-star"
+                    a.amount href="#" (679)
+                li
+                  .title Overall impression of the application
+                  .rating-box
+                    span.rating
+                      span.value 4
+                      i class="fas fa-star"
+                    a.amount href="#" (679)
+                li
+                  .title Overall impression of the application
+                  .rating-box
+                    span.rating
+                      span.value 4
+                      i class="fas fa-star"
+                    a.amount href="#" (679)
+            .content-box__btns
+              a.show-more href="#" Show more
+              a.btn.btn-info.btn-small href="#" New feedback
+
+          .content-box
+            .content-box__header
+              h2 To do
+            .content-box__body
+              ul.todo-list
+                li.todo-list__item
+                  input.todo-list__checkbox type="checkbox" checked="checked" id="todo-item01"
+                  label.todo-list__label for="todo-item01"
+                    span.todo-list__title Send confirmation to the responder
+                    span.todo-list__check-icon
+                      i class="fas fa-check"
+
+                li.todo-list__item
+                  input.todo-list__checkbox type="checkbox" checked="checked" id="todo-item02"
+                  label.todo-list__label for="todo-item02"
+                    span.todo-list__title Сonfirm the response
+                    span.todo-list__check-icon
+                      i class="fas fa-check"
+
+                li.todo-list__item
+                  input.todo-list__checkbox type="checkbox" id="todo-item03"
+                  label.todo-list__label for="todo-item03"
+                    span.todo-list__title Request documents
+                    span.todo-list__description
+                      span To request documents follow
+                      a href="#" this link
+                    span.todo-list__check-icon
+                      i class="fas fa-check"
+
+                li.todo-list__item
+                  input.todo-list__checkbox type="checkbox" checked="checked" id="todo-item04"
+                  label.todo-list__label for="todo-item04"
+                    span.todo-list__title Сonfirm the response
+                    span.todo-list__check-icon
+                      i class="fas fa-check"
+
+                li.todo-list__item
+                  input.todo-list__checkbox type="checkbox" id="todo-item05"
+                  label.todo-list__label for="todo-item05"
+                    span.todo-list__title Send your passport
+                    span.todo-list__description
+                      span Take a selfie with your passport and send it to us by e-mail
+                    span.todo-list__check-icon
+                      i class="fas fa-check"
+
+                li.todo-list__item
+                  input.todo-list__checkbox type="checkbox" id="todo-item06"
+                  label.todo-list__label for="todo-item06"
+                    span.todo-list__title Сonfirm your income for the last year
+                    span.todo-list__description
+                      span Go to
+                      a href="#" user account
+                    span.todo-list__check-icon
+                      i class="fas fa-check"
+
+
+
+          .content-box
+            .content-box__header
+              h2 Events
+            .content-box__body
+              h3 Assessment Center
+              div.event-item
+                div.event-item__header
+                  a.event-item__title href="#" Bewerbertag in der Zukunft
+                  span.event-item__date 2022-03-26 8:54 am
+                  a.event-item__participants href="#"
+                    span.event-item__participants-number 3
+                    i class="fas fa-users"
+                  a.event-item__delete  href="#"
+                    i class="fas fa-trash"
+                div.event-item__footer
+                  span.event-item__pinned Planned
+                  span.event-item__invite-status Invite is pending
+
+        .content
+          .content-box
+            .content-box__header
+              div.tabs-holder
+                div.tabs-scroll
+                  ul.tabset.js-tabs
+                    li
+                      a href="#tab01" Documents
+                    li
+                      a href="#tab02" class="active" Comunication
+                    li
+                      a href="#tab03" Question
+                    li
+                      a href="#tab04" Sonstiges
+
+            .tab-content#tab01
+              .content-box__body
+                ul.sertificates-list
+                  li.sertificates-list__item
+                    div.sertificates-list__image
+                      img src="images/sertificate.jpg" alt="sertificate"
+                      div.sertificates-list__image-tools
+                        a.sertificates-list__image-tool href="#"
+                          i class="far fa-eye"
+                        a.sertificates-list__image-tool href="#"
+                          i class="fas fa-download"
+                    span.sertificates-list__filename
+                      span.sertificates-list__name Falk_Engler_15 Falk_Engler_15 Falk_Engler_15
+                      span.sertificates-list__extension .pdf
+                    span.sertificates-list__updated Last updated: 07.11.2019
+
+                  li.sertificates-list__item
+                    div.sertificates-list__image
+                      img src="images/sertificate.jpg" alt="sertificate"
+                      div.sertificates-list__image-tools
+                        a.sertificates-list__image-tool href="#"
+                          i class="far fa-eye"
+                        a.sertificates-list__image-tool href="#"
+                          i class="fas fa-download"
+                    span.sertificates-list__filename
+                      span.sertificates-list__name Falk_Engler_15 Falk_Engler_15 Falk_Engler_15
+                      span.sertificates-list__extension .pdf
+                    span.sertificates-list__updated Last updated: 07.11.2019
+
+                  li.sertificates-list__item
+                    div.sertificates-list__image
+                      img src="images/sertificate.jpg" alt="sertificate"
+                      div.sertificates-list__image-tools
+                        a.sertificates-list__image-tool href="#"
+                          i class="far fa-eye"
+                        a.sertificates-list__image-tool href="#"
+                          i class="fas fa-download"
+                    span.sertificates-list__filename
+                      span.sertificates-list__name Falk_Engler_15 Falk_Engler_15 Falk_Engler_15
+                      span.sertificates-list__extension .pdf
+                    span.sertificates-list__updated Last updated: 07.11.2019
+
+                  li.sertificates-list__item
+                    div.sertificates-list__image
+                      img src="images/sertificate.jpg" alt="sertificate"
+                      div.sertificates-list__image-tools
+                        a.sertificates-list__image-tool href="#"
+                          i class="far fa-eye"
+                        a.sertificates-list__image-tool href="#"
+                          i class="fas fa-download"
+                    span.sertificates-list__filename
+                      span.sertificates-list__name Falk_Engler_15 Falk_Engler_15 Falk_Engler_15
+                      span.sertificates-list__extension .pdf
+                    span.sertificates-list__updated Last updated: 07.11.2019
+
+                  li.sertificates-list__item
+                    div.sertificates-list__image
+                      img src="images/sertificate.jpg" alt="sertificate"
+                      div.sertificates-list__image-tools
+                        a.sertificates-list__image-tool href="#"
+                          i class="far fa-eye"
+                        a.sertificates-list__image-tool href="#"
+                          i class="fas fa-download"
+                    span.sertificates-list__filename
+                      span.sertificates-list__name Falk_Engler_15 Falk_Engler_15 Falk_Engler_15
+                      span.sertificates-list__extension .pdf
+                    span.sertificates-list__updated Last updated: 07.11.2019
+
+                  li.sertificates-list__item
+                    div.sertificates-list__image
+                      img src="images/sertificate.jpg" alt="sertificate"
+                      div.sertificates-list__image-tools
+                        a.sertificates-list__image-tool href="#"
+                          i class="far fa-eye"
+                        a.sertificates-list__image-tool href="#"
+                          i class="fas fa-download"
+                    span.sertificates-list__filename
+                      span.sertificates-list__name Falk_Engler_15 Falk_Engler_15 Falk_Engler_15
+                      span.sertificates-list__extension .pdf
+                    span.sertificates-list__updated Last updated: 07.11.2019
+
+                  li.sertificates-list__item
+                    div.sertificates-list__image
+                      img src="images/sertificate.jpg" alt="sertificate"
+                      div.sertificates-list__image-tools
+                        a.sertificates-list__image-tool href="#"
+                          i class="far fa-eye"
+                        a.sertificates-list__image-tool href="#"
+                          i class="fas fa-download"
+                    span.sertificates-list__filename
+                      span.sertificates-list__name Falk_Engler_15 Falk_Engler_15 Falk_Engler_15
+                      span.sertificates-list__extension .pdf
+                    span.sertificates-list__updated Last updated: 07.11.2019
+
+                  li.sertificates-list__item
+                    div.sertificates-list__image
+                      img src="images/sertificate.jpg" alt="sertificate"
+                      div.sertificates-list__image-tools
+                        a.sertificates-list__image-tool href="#"
+                          i class="far fa-eye"
+                        a.sertificates-list__image-tool href="#"
+                          i class="fas fa-download"
+                    span.sertificates-list__filename
+                      span.sertificates-list__name Falk_Engler_15 Falk_Engler_15 Falk_Engler_15
+                      span.sertificates-list__extension .pdf
+                    span.sertificates-list__updated Last updated: 07.11.2019
+
+                  li.sertificates-list__item
+                    div.sertificates-list__image
+                      img src="images/sertificate.jpg" alt="sertificate"
+                      div.sertificates-list__image-tools
+                        a.sertificates-list__image-tool href="#"
+                          i class="far fa-eye"
+                        a.sertificates-list__image-tool href="#"
+                          i class="fas fa-download"
+                    span.sertificates-list__filename
+                      span.sertificates-list__name Falk_Engler_15 Falk_Engler_15 Falk_Engler_15
+                      span.sertificates-list__extension .pdf
+                    span.sertificates-list__updated Last updated: 07.11.2019
+
+                  li.sertificates-list__item
+                    div.sertificates-list__image
+                      img src="images/sertificate.jpg" alt="sertificate"
+                      div.sertificates-list__image-tools
+                        a.sertificates-list__image-tool href="#"
+                          i class="far fa-eye"
+                        a.sertificates-list__image-tool href="#"
+                          i class="fas fa-download"
+                    span.sertificates-list__filename
+                      span.sertificates-list__name Falk_Engler_15 Falk_Engler_15 Falk_Engler_15
+                      span.sertificates-list__extension .pdf
+                    span.sertificates-list__updated Last updated: 07.11.2019
+
+                  li.sertificates-list__item
+                    div.sertificates-list__image
+                      img src="images/sertificate.jpg" alt="sertificate"
+                      div.sertificates-list__image-tools
+                        a.sertificates-list__image-tool href="#"
+                          i class="far fa-eye"
+                        a.sertificates-list__image-tool href="#"
+                          i class="fas fa-download"
+                    span.sertificates-list__filename
+                      span.sertificates-list__name Falk_Engler_15 Falk_Engler_15 Falk_Engler_15
+                      span.sertificates-list__extension .pdf
+                    span.sertificates-list__updated Last updated: 07.11.2019
+
+                  li.sertificates-list__item
+                    div.sertificates-list__image
+                      img src="images/sertificate.jpg" alt="sertificate"
+                      div.sertificates-list__image-tools
+                        a.sertificates-list__image-tool href="#"
+                          i class="far fa-eye"
+                        a.sertificates-list__image-tool href="#"
+                          i class="fas fa-download"
+                    span.sertificates-list__filename
+                      span.sertificates-list__name Falk_Engler_15 Falk_Engler_15 Falk_Engler_15
+                      span.sertificates-list__extension .pdf
+                    span.sertificates-list__updated Last updated: 07.11.2019
+
+            .tab-content#tab02.active
+              .content-box__body
+                .communication-section.custom-scrollbar
+                  .sort-by
+                    .sort-by__item
+                      span.sort-by__label Displaying:
+                      div.sort-by__item-holder
+                        select class="chosen-select drop-left"
+                          option All activity
+                          option Option 1
+                          option Option 2
+                    .sort-by__item
+                      span.sort-by__label By:
+                      div.sort-by__item-holder
+                        select class="chosen-select drop-left"
+                          option Everyone
+                          option Option 1
+                          option Option 2
+
+                  .communication-post.conversation-message
+                    .communication-post__header
+                      .communication-post__avatar.h_bg-green
+                        img src="images/avatar.jpg" alt="User avatar"
+                      .communication-post__author-info
+                        span.communication-post__author-name Philipp Reik
+                        span.communication-post__post-time 18/12/2019 18:26
+                    .communication-post__content
+                      h3 Ihre Bewerbung
+                      p Hello Mr. Newman,<br/>
+                                                Thank you for your application and we are pleased that you are interested in working in our company.<br/>
+                                                The careful examination of your documents will still take some time. We will then get in touch with you immediately and without being asked. Until then we ask for your patience.<br/>
+                                                We would like to point out that some of your application data will be stored in an IT system. This data will of course be treated confidentially, not passed on to third parties and deleted after one year at the latest.
+
+                      p Sincerely, Your HR department
+
+                  .communication-post.pinned-post.conversation-message
+                    .communication-post__header
+                      .communication-post__avatar.h_bg-violet
+                        img src="images/avatar.jpg" alt="User avatar"
+                      .communication-post__author-info
+                        span.communication-post__author-name Sandra Newman
+                        span.communication-post__post-time 18/12/2019 18:26
+                    .communication-post__content
+                      p Applicant should be invited for a personal interview.
+                    span.pinned-post-icon
+                      i class="fas fa-map-pin"
+
+                  .communication-post.conversation-message
+                    .communication-post__header
+                      .communication-post__avatar.h_bg-yellow
+                        img src="images/avatar.jpg" alt="User avatar"
+                      .communication-post__author-info
+                        span.communication-post__author-name Philipp Reik
+                        span.communication-post__post-time 18/12/2019 18:26
+                    .communication-post__content
+                      h3 Ihre Bewerbung
+                      p Hello Mr. Newman,<br/>
+                                                Thank you for your application and we are pleased that you are interested in working in our company.<br/>
+                                                The careful examination of your documents will still take some time. We will then get in touch with you immediately and without being asked. Until then we ask for your patience.<br/>
+                                                We would like to point out that some of your application data will be stored in an IT system. This data will of course be treated confidentially, not passed on to third parties and deleted after one year at the latest.
+
+                      p Sincerely, Your HR department
+
+              .content-box__footer
+                .send-message
+                  .send-message__row
+                    button.add-file
+                      i class="fas fa-paperclip"
+                    div.send-message__field-wrap
+                      input.send-message__text-field type="text" placeholder="Type your message"
+                      a.send-message__feed
+                        img src="images/icons/feed.svg"
+                    button type="submit" class="submit btn btn-info"
+                      span.icon
+                        img src="images/icons/icon-send.svg"
+                      span.text Send
+                  .send-message__recipient
+                    .sort-by
+                      .sort-by__item
+                        span.sort-by__label To:
+                        div.sort-by__item-holder
+                          select class="chosen-select drop-left drop-to-top"
+                            option Internal correspondence
+                            option Сandidate
+                            option Only management
+
+            .tab-content#tab03 tab 3
+            .tab-content#tab04
+              .content-box__body
+                .sonstiges
+                  div.sonstiges__content.custom-scrollbar
+                    h3 Lobenslauf
+                    ul.files-list
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Application folder complete
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Complete application folder an application folder complete portfolio application folder complete portfolio
+                          span.files-list__extension .img
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Short application portfolio
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Working documents
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                    h3 Anschreiban
+                    ul.files-list
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Application folder complete
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Short application portfolio
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Working documents
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+
+                    h3 Sonstiges
+                    ul.files-list
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Application folder complete
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Working documents
+                          span.files-list__extension .img
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Short application portfolio
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Working documents
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Working documents
+                          span.files-list__extension .img
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Short application portfolio
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Working documents
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+
+                    h3 Ausdruck
+                    ul.files-list
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Application folder complete
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Short application portfolio
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Working documents
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                    h3 Ausdruck
+                    ul.files-list
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Application folder complete
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Short application portfolio
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+                      li.files-list__item
+                        span.files-list__title-wrap
+                          span.files-list__title Working documents
+                          span.files-list__extension .pdf
+                        span.files-list__info 345 KB (18.04.20)
+                        a.files-list__download href="#"
+                          i class="fas fa-download"
+                          span Download
+
+        aside.aside
+          .content-box
+            .content-box__header
+              h2 Skills
+            .content-box__body
+              ul.skills-list
+                li
+                  .skills-list__label
+                    span Informatics
+                    b 5.0
+                  .skills-list__progressbar style="width: 100%;"
+                li
+                  .skills-list__label
+                    span French
+                    b Beginner
+                  .skills-list__progressbar style="width: 60%;"
+                li
+                  .skills-list__label
+                    span English
+                    b Fluent
+                  .skills-list__progressbar style="width: 90%;"
+                li
+                  .skills-list__label
+                    span Economics
+                    b Average
+                  .skills-list__progressbar style="width: 45%;"
+
+
+          .content-box
+            .content-box__header
+              h2 Printable Documents
+            .content-box__body
+              ul.docs-list
+                li
+                  a.docs-list__title href="#" Application folder complete
+                  span.docs-list__size 4 MB (18.04.20)
+                li
+                  a.docs-list__title href="#" Complete application folder actions
+                  span.docs-list__size 345 KB (18.04.20)
+                li
+                  a.docs-list__title href="#" Short application portfolio
+                  span.docs-list__size 345 KB (18.04.20)
+                li
+                  a.docs-list__title href="#" Working documents
+                  span.docs-list__size 345 KB (18.04.20)
+                li
+                  a.docs-list__title href="#" Passport
+                  span.docs-list__size 345 KB (18.04.20)
+                li
+                  a.docs-list__title href="#" Application folder complete
+                  span.docs-list__size 4 MB (18.04.20)
+                li
+                  a.docs-list__title href="#" Complete application folder actions
+                  span.docs-list__size 345 KB (18.04.20)
+                li
+                  a.docs-list__title href="#" Short application portfolio
+                  span.docs-list__size 345 KB (18.04.20)
+                li
+                  a.docs-list__title href="#" Working documents
+                  span.docs-list__size 345 KB (18.04.20)
+                li
+                  a.docs-list__title href="#" Passport
+                  span.docs-list__size 345 KB (18.04.20)
+
+          .content-box
+            .content-box__header
+              h2 Hiring process
+            .content-box__body
+              ul.steps-list
+                li.steps-list__step.status-done
+                  div.steps-list__step-icon
+                    i class="far fa-user-circle"
+                  div.steps-list__status
+                    i class="fas fa-check"
+                    i class="fas fa-stopwatch"
+                  div.div.steps-list__text-box
+                    span.steps-list__step-title Registration
+                    span.steps-list__step-description You have successfully registered
+                li.steps-list__step.status-done
+                  div.steps-list__step-icon
+                    i class="fas fa-file-contract"
+                  div.steps-list__status
+                    i class="fas fa-check"
+                    i class="fas fa-stopwatch"
+                  div.div.steps-list__text-box
+                    span.steps-list__step-title Resume
+                    span.steps-list__step-description Resume has been added in your profile
+                li.steps-list__step.status-current
+                  div.steps-list__step-icon
+                    i class="fas fa-dollar-sign"
+                  div.steps-list__status
+                    i class="fas fa-check"
+                    i class="fas fa-stopwatch"
+                  div.div.steps-list__text-box
+                    span.steps-list__step-title Offer
+                    span.steps-list__step-description The offer was sent by your e-mail
+                li.steps-list__step
+                  div.steps-list__step-icon
+                    i class="fas fa-hands-helping"
+                  div.steps-list__status
+                    i class="fas fa-check"
+                    i class="fas fa-stopwatch"
+                  div.div.steps-list__text-box
+                    span.steps-list__step-title Contract
+                    span.steps-list__step-description Complete the previous point
+                li.steps-list__step
+                  div.steps-list__step-icon
+                    i class="fas fa-check"
+                  div.steps-list__status
+                    i class="fas fa-check"
+                    i class="fas fa-stopwatch"
+                  div.div.steps-list__text-box
+                    span.steps-list__step-title Finish
+                    span.steps-list__step-description Complete the previous point
+
+          .content-box
+            .content-box__header
+              h2 History
+            .content-box__body
+              ul.steps-list.steps-list--history
+                li.steps-list__step.history-status--attach
+                  div.steps-list__step-date
+                    span.steps-list__step-date-day 20
+                    span.steps-list__step-date-month MAR
+                  div.steps-list__history-icon
+                    i class="fas fa-paperclip"
+                  div.div.steps-list__text-box
+                    span.steps-list__step-title Attached file
+                    span.steps-list__step-description The file has been attached and sent
+                li.steps-list__step.history-status--submit
+                  div.steps-list__step-date
+                    span.steps-list__step-date-day 16
+                    span.steps-list__step-date-month MAR
+                  div.steps-list__history-icon
+                    i class="fas fa-paperclip"
+                  div.div.steps-list__text-box
+                    span.steps-list__step-title Submit review
+                    span.steps-list__step-description Several reviews of job participants were added
+                li.steps-list__step.history-status--sent
+                  div.steps-list__step-date
+                    span.steps-list__step-date-day 15
+                    span.steps-list__step-date-month MAR
+                  div.steps-list__history-icon
+                    i class="fas fa-paperclip"
+                  div.div.steps-list__text-box
+                    span.steps-list__step-title Sent E-Mail to applicant
+                    span.steps-list__step-description Mail has been sent
+                li.steps-list__step.history-status--listed
+                  div.steps-list__step-date
+                    span.steps-list__step-date-day 12
+                    span.steps-list__step-date-month MAR
+                  div.steps-list__history-icon
+                    i class="fas fa-paperclip"
+                  div.div.steps-list__text-box
+                    span.steps-list__step-title Listed as competitor
+                    span.steps-list__step-description The file has been attached and sent
+                li.steps-list__step.history-status--added
+                  div.steps-list__step-date
+                    span.steps-list__step-date-day 10
+                    span.steps-list__step-date-month MAR
+                  div.steps-list__history-icon
+                    i class="fas fa-paperclip"
+                  div.div.steps-list__text-box
+                    span.steps-list__step-title A task has been added
+                    span.steps-list__step-description A performer has been added to three tasks
+                li.steps-list__step.history-status--submit
+                  div.steps-list__step-date
+                    span.steps-list__step-date-day 05
+                    span.steps-list__step-date-month MAR
+                  div.steps-list__history-icon
+                    i class="fas fa-paperclip"
+                  div.div.steps-list__text-box
+                    span.steps-list__step-title Submit review
+                    span.steps-list__step-description Several reviews of job participants were added
+
+    footer.footer
+      div.footer-content
+        div.footer-logo-wrap
+          a target="_blank" class="footer-logo" href="#"
+            img src="images/mhm-logo2.svg" alt="Logo small"
+          ul.footer-main-links
+            li
+              a href="#" MHM Systemhaus Gmbh
+            li
+              a href="#" Impressum
+        div.footer-additional-info
+          span.app-version v.9.28.12
+      span.copyright-text &copy; Copyright 2021
+
+
+
+    script src="js/jquery-3.6.0.min.js"
+    script src="js/application-menu.js"
+    script src="js/tabs.js"
+    script src="js/chosen.jquery.min.js"
+    script src="js/chosen-init.js"
+    script src="js/search.js"
+    script src="js/popups.js"

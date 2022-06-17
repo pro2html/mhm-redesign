@@ -1,0 +1,982 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    title MHM-HR Applications
+
+    / Fonts
+    link rel="preconnect" href="https://fonts.gstatic.com"
+    link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"
+
+    / Styles
+    link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+    link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css"
+    link rel="stylesheet" href="css/normalize.css" media="all"
+    link rel="stylesheet" href="css/bootstrap-grid.css" media="all"
+    link rel="stylesheet" href="css/chosen.min.css" media="all"
+    link rel="stylesheet" href="css/all.css" media="all"
+    link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"
+
+  body
+    header.header.new-style
+      .logo-wrap
+        a.logo href="/"
+          img id="corporate-logo" src="images/mhm-logo.svg" alt="Corporate logo"
+
+      #application-menu
+        a.nav-mobile-opener href="#"
+          i class="fas fa-bars"
+        div.nav-mobile-overlay
+        div.nav-wrap
+          a.nav-mobile-close
+            i class="fas fa-times"
+          span.nav-mobile-logo
+            img src="images/mhm-logo.svg" alt="Corporate logo"
+          span.nav-title Menu
+          ul.nav
+            li
+              a href="#show-mobile-nav" Dashboardfa sd fa dfasdf asdf asdf
+            li
+              a href="#show-mobile-nav" Personnel asdf asdfasdf af asdfas dfas f
+            li.dropdown.current
+              a href="#show-mobile-nav"
+                span Applications
+                span class="fas fa-chevron-down drop-arrow"
+              ul.sub-nav.popup-content
+                li
+                  a href="/staff/job_applications" Applications
+                li
+                  a href="/staff/messages" Communication
+            li
+              a href="/staff/pool_applications" Talent Pool
+            li
+              a href="/staff/events" Events
+
+      .header-info
+        .user-settings.popup-holder
+          .user-settings__opener
+            i class="fas fa-user-cog"
+            span.item-counter 5
+          div.popup-content
+            span.roles-title
+              span.roles-title__label You have
+              span.roles-title__roles-number 5 roles
+            select class="chosen-select drop-left"
+              option Admin
+              option Admin
+
+        ul.actions.user-actions
+          li
+            a.icon.icon-search.js-search-opener href="#"
+              i class="fas fa-search"
+            div.search-drop.js-search-drop
+              form
+                div.search-drop__content
+                  div.search-drop__input-wrap
+                    i class="fas fa-search search-drop__field-icon"
+                    input type="text" placeholder="Search" class="search-drop__text-field"
+                    button.search-drop__submit
+                      i class="fas fa-chevron-down"
+                  a.search-drop__close.js-search-opener href="#"
+                    i class="fas fa-times"
+
+          li.popup-holder
+            a.icon.icon-settings href="#"
+              i class="fas fa-cog"
+            div.popup-content.popup-content--pos-right.popoup-settings
+              h2 Administrations
+              ul.settings-menu
+                li
+                  a href="#" Application form
+                li
+                  a href="#" Assets
+                li
+                  a href="#" Configutation Import/Export
+                li
+                  a href="#" Custom value
+                li
+                  a href="#" Process duration
+                li
+                  a href="#" Publication Channels
+                li
+                  a href="#" Question Categories
+                li
+                  a href="#" Question
+                li
+                  a href="#" Security logs
+                li
+                  a href="#" System Configuration
+                li
+                  a href="#" Templates
+                li
+                  a href="#" User Translations
+                li
+                  a href="#" Users
+          li
+            a.icon.icon-notifications href="#"
+              i class="far fa-bell"
+              span.item-counter 5
+          li
+            a.icon.icon-notifications href="#"
+              i class="fas fa-question"
+
+        .user-logo.popup-holder
+          div.user-logo__text DR
+          div class="popup-content popup-content--pos-right user-popup"
+            div.user-popup__header
+              span.user-popup__brand-name MHMeRECRUTING
+              span.user-popup__user-name Prof. Dr. Hg. Admin. Admin
+              div.lang-select
+                a href="#" class="active-language" DE
+                a href="#" ENG
+            hr
+            div.user-popup__row
+              a.user-popup__link href="#"
+                span.user-popup__link-icon
+                  i class="far fa-user-circle"
+                span.user-popup__link-title Profile
+            div.user-popup__row
+              a.user-popup__link href="#"
+                span.user-popup__link-icon
+                  i class="fas fa-cog"
+                span.user-popup__link-title Settings
+            hr
+            div.user-popup__row
+              a.user-popup__link href="#"
+                span.user-popup__link-icon
+                  i class="fas fa-sign-out-alt"
+                span.user-popup__link-title Log out
+              span.user-popup__log-counter 18 min
+
+
+
+    main.main.new-style
+      .intro-info.new-style
+        .content-holder
+          .intro-user-info
+            .intro-user-info__avatar.portrait-image
+              img src="images/avatar02.jpg" alt="User avatar"
+            .intro-user-info__text-box
+              .intro-user-info__text-head
+                .intro-user-info__name
+                  h1 Alice, James
+                .intro-user-info__rating-holder
+                  .intro-user-info__rating
+                    .score 5
+                    i class="fas fa-star"
+                  span.intro-user-info__rating-status Standard
+              .intro-user-info__status-wrap
+                a.intro-user-info__status href="#" Contract offered
+                .info-tooltip
+                  i class="fas fa-info-circle"
+                  .info-tooltip__drop
+                    address Musterstraße 1, Berlin
+                    div +49 970 192 381
+                    div newman.james@gmail.com
+                    p Application: Webdeveloper Ruby on Rails (f/md/d)
+            .intro-user-info__contacts
+              address Musterstraße 1, Berlin
+              a href="tel:49970192381" +49 970 192 381
+              a href="mailto:newman.james@gmail.com" newman.james@gmail.com
+              p
+                span Application:
+                a href="#" Webdeveloper Ruby on Rails (f/md/d)
+
+
+          .intro-actions-col
+            .intro-actions
+              ul
+                li
+                  a class="detail" title="Details" href="/staff/job_applications/27"
+                    img src="images/icons/list-view.svg"
+                li
+                  a class="reminder" title="Reminder" href="/staff/reminders/new?id=27&amp;type=job_applications%2Fstandard"
+                    i class="fas fa-stopwatch"
+              .h_ml-24
+                a class="edit btn btn-outline-light" title="Edit" href="/staff/job_applications/27/edit"
+                  span.icon
+                    i class="fas fa-pen"
+                  span.text Edit Profile
+              .transitions-menu.h_ml-16
+                a class="actions-opener toggle-link btn btn-primary" href="#"
+                  span.icon
+                    i class="fas fa-chevron-down d-none d-md-block"
+                    i class="fas fa-plus d-block d-md-none"
+                  span.text Actions
+                .transitions-menu__dropdown.popup-content
+                  .transition-sections
+                    h2 Status
+                    ul.transitions-menu__group
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-times"
+                          span.text Reject
+                      li
+                        a href="#"
+                          span.icon
+                            i class="far fa-envelope"
+                          span.text Send E-Mail to applicant
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-user-edit"
+                          span.text Mass tagging
+                    hr
+                    ul.transitions-menu__group
+                      li
+                        a href="#"
+                          span.icon
+                            i class="far fa-user-circle"
+                          span.text Request manager review
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-redo"
+                          hone-alt
+                          span.text Revise review
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-microphone-alt"
+                          span.text Create interview
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-plus"
+                          span.text Invite to assessment center
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-file-contract"
+                          span.text Offer contract
+                    hr
+                    ul.transitions-menu__group
+                      li
+                        a href="#"
+                          span.icon
+                            i class="far fa-plus-square"
+                          span.text Create talent pool application
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-retweet"
+                          span.text Rehang
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-reply"
+                          span.text Retract application
+
+                    h2 Council review
+                    ul.transitions-menu__group
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-times"
+                          span.text Unlist as competitor
+
+                    h2 Requested documents
+                    ul.transitions-menu__group
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-upload"
+                          span.text Upload documents
+
+                    h2 Disabilities
+                    ul.transitions-menu__group
+                      li
+                        a href="#"
+                          span.icon
+                            i class="far fa-minus-square"
+                          span.text Remove as Competitor
+
+                    h2 Feedback
+                    ul.transitions-menu__group
+                      li
+                        a href="#"
+                          span.icon
+                            i class="fas fa-plus"
+                          span.text New
+
+            .intro-info-nav
+              #previous-job-application
+                a.intro-info-nav__prev.action-previous title="Previous" href="#"
+                  i class="fas fa-arrow-left"
+              span.intro-info-nav__counter Profile 1/35
+              #next-job-application
+                a.intro-info-nav__next.action-next title="Next" href="#"
+                  i class="fas fa-arrow-right"
+            ul.other-users
+              li.other-users__item.h_bg-green
+                .other-users__item-icon
+                  img src="images/avatar.jpg" alt="User avatar"
+                  span.icon-category
+                    img src="images/icons/icon-eye.svg" alt="Avatar icon"
+                .other-users__item-title Observer
+                .other-users__dropdown
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-eye.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-eye.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-eye.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+
+              li.other-users__item.h_bg-yellow
+                .other-users__item-icon
+                  img src="images/avatar.jpg" alt="User avatar"
+                  span.icon-category
+                    img src="images/icons/icon-user.svg" alt="Avatar icon"
+                .other-users__item-title Recruiter
+                .other-users__dropdown
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-user.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-user.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-user.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+
+              li.other-users__item.h_bg-violet
+                .other-users__item-icon
+                  img src="images/avatar.jpg" alt="User avatar"
+                  span.icon-category
+                    img src="images/icons/icon-xy.svg" alt="Avatar icon"
+                .other-users__item-title Observer
+                .other-users__dropdown
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-xy.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-xy.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+                  .other-users__dropdown-item
+                    .other-users__item-icon
+                      img src="images/avatar.jpg" alt="User avatar"
+                      span.icon-category
+                        img src="images/icons/icon-xy.svg" alt="Avatar icon"
+                    .other-users__item-options
+                      a.other-users__item-option href="#"
+                        i class="fas fa-at"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-bell"
+                      a.other-users__item-option href="#"
+                        i class="fas fa-hashtag"
+      div.edit-content
+        div.tabs-holder.tabs-navigation
+          div.tabs-scroll.content-fixed
+            ul.tabset.js-tabs.tabset_aligned-left
+              li
+                a href="#tab01" Basic&nbsp;Information
+              li
+                a href="#tab02" class="active" Attachments
+              li
+                a href="#tab03" Skills
+              li
+                a href="#tab04" Background
+              li
+                a href="#tab05" Links
+              li
+                a href="#tab06" Observers
+              li
+                a href="#tab07" Origin
+              li
+                a href="#tab08" Questionnaire&nbsp;online&nbsp;application
+              li
+                a href="#tab09" Rejection&nbsp;reason
+              li
+                a href="#tab10" CVlizer
+              li
+                a href="#tab11" Availability&nbsp;For&nbsp;Other&nbsp;Vacancies
+        div.edit-content__holder
+          div.edit-content__form.content-fixed
+            div.content-box
+              .content-box__header
+                h2 Basic Information
+              .content-box__body
+                h2 General
+                div.edit-content__form-section
+                  div.edit-content__form-row
+                    div.edit-content__form-col-6
+                      label Salutation
+                      select class="chosen-select drop-left grey chosen-select--outlined width-100" data-placeholder="Please select"
+                        option Mr
+                        option Mrs
+                    div.edit-content__form-col-6
+                      label for="input01" class="form-label" Title
+                      div.input-wrap.active
+                        input type="text" id="input01" class="js-clearable-input text-field text-field--outlined" value="My base info"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-6
+                      label for="input02"
+                        | First name
+                        span.required-mark *
+                      div.input-wrap.active
+                        input type="text" id="input02" class="js-clearable-input text-field text-field--outlined" value="My base info"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                    div.edit-content__form-col-6
+                      label for="input03"
+                        | Last name
+                        span.required-mark *
+                      div.input-wrap.active
+                        input type="text" id="input03" class="js-clearable-input text-field text-field--outlined" value="My base info"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-6
+                      label for="input04"
+                        | E-mail address
+                        span.required-mark *
+                      div.input-wrap.active
+                        input type="text" id="input04" class="js-clearable-input text-field text-field--outlined" value="My base info"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                    div.edit-content__form-col-6
+                      label for="input05" Date of birth
+                      div.input-wrap
+                        input type="text" class="js-datepicker text-field text-field--outlined" id="input05" value="01.01.2021"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-6
+                      label for="input06" Birth city
+                      div.input-wrap.active
+                        input type="text" id="input06" class="js-clearable-input text-field text-field--outlined" value="Moscow"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                    div.edit-content__form-col-6
+                      label for="input07" Birth country
+                      div.input-wrap.active
+                        input type="text" id="input07" class="js-clearable-input text-field text-field--outlined" value="Russain Federation"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                h2 Nationality
+                div.edit-content__form-section
+                  div.edit-content__form-row
+                    div.edit-content__form-col-6
+                      label for="input09" Nationality
+                      div.input-wrap.active
+                        input type="text" id="input09" class="js-clearable-input text-field text-field--outlined" value="Russain"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                    div.edit-content__form-col-6
+                      label Legal guardian salutation
+                      select class="chosen-select drop-left grey chosen-select--outlined width-100" data-placeholder="Please select"
+                        option Legal guardian salutation
+                        option Legal guardian salutation 2
+                  div.edit-content__form-row
+                    div.edit-content__form-col-6
+                      label for="input10" Legal guardian first name
+                      div.input-wrap.active
+                        input type="text" id="input10" class="js-clearable-input text-field text-field--outlined" value="Legal guardian first name"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                    div.edit-content__form-col-6
+                      label for="input11" Legal guardian last name
+                      div.input-wrap.active
+                        input type="text" id="input11" class="js-clearable-input text-field text-field--outlined" value="Legal guardian last name"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                h2 Address
+                div.edit-content__form-section
+                  div.edit-content__form-row
+                    div.edit-content__form-col-6
+                      label for="input12" Address
+                      div.input-wrap.active
+                        input type="text" id="input12" class="js-clearable-input text-field text-field--outlined" value="Yangelya str. 6"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                    div.edit-content__form-col-6
+                      label for="input13" Zip Code
+                      div.input-wrap.active
+                        input type="text" id="input13" class="js-clearable-input text-field text-field--outlined" value="117534"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-6
+                      label for="input14" City
+                      div.input-wrap.active
+                        input type="text" id="input14" class="js-clearable-input text-field text-field--outlined" value="Moscow"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                    div.edit-content__form-col-6
+                      label for="input15" State
+                      div.input-wrap.active
+                        input type="text" id="input15" class="js-clearable-input text-field text-field--outlined" value="–"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-6
+                      label for="input16" Country
+                      div.input-wrap.active
+                        input type="text" id="input16" class="js-clearable-input text-field text-field--outlined" value="Russan Federation"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                    div.edit-content__form-col-6
+                      label for="input17" Telephone
+                      div.input-wrap.active
+                        input type="text" id="input17" class="js-clearable-input text-field text-field--outlined" value="+7999123456"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-6
+                      label for="input18" Mobile
+                      div.input-wrap
+                        input type="text" id="input18" class="js-clearable-input text-field text-field--outlined" placeholder="Placeholder"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                h2 Other
+                div.edit-content__form-section
+                  div.edit-content__form-row
+                    div.edit-content__form-col-6
+                      label for="input20" Desired salary
+                      div.input-wrap
+                        input type="text" id="input20" class="js-clearable-input text-field text-field--outlined" placeholder="Placeholder"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                    div.edit-content__form-col-6
+                      label for="input21" Period of notice
+                      div.input-wrap
+                        input type="text" id="input21" class="js-clearable-input text-field text-field--outlined" placeholder="Placeholder"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-6
+                      label Tags
+                      select class="chosen-select drop-left drop-to-bottom grey chosen-select--outlined width-100" data-placeholder="Pick from a list" multiple=""
+                        option
+                        option 1st filter
+                        option 2nd filter
+                        option 3rd filter
+                    div.edit-content__form-col-6
+                      label for="input22" Start of work
+                      div.input-wrap
+                        input type="text" class="js-datepicker text-field text-field--outlined" id="input22" value="01.01.2021"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label Comment applications list
+                      textarea placeholder="Textarea placeholder"
+                      span.textarea-counter 0/140
+
+            div.content-box
+              .content-box__header
+                h2 Attachments
+              .content-box__body
+                div.edit-content__container
+                  h2 Document
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label
+                        | Type
+                        span.required-mark *
+                      select class="chosen-select drop-left drop-to-bottom grey chosen-select--outlined width-100" data-placeholder="Placeholder" multiple=""
+                        option
+                        option 1st filter
+                        option 2nd filter
+                        option 3rd filter
+                  form action="/file-upload" class="dropzone-custom js-dropzone-custom"
+                    div.dropzone-custom__default.js-dropzone-custom__default
+                      span.dropzone-custom__default-icon
+                        img src="images/icons/folder-cloud.svg"
+                      span.dropzone-custom__default-message
+                        span Download
+                        | or drop file here
+                      span.dropzone-custom__default-note pdf, xlsx, png, jpg
+                      span.dropzone-custom__default-note Max size — 100 Mb
+                    div.dropzone-previews.js-dropzone-previews
+                  button.edit-content__remove-container type="button"
+                    i class="fas fa-times"
+                div.edit-content__container
+                  h2 Photo
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label
+                        | Type
+                        span.required-mark *
+                      select class="chosen-select drop-left drop-to-bottom grey chosen-select--outlined width-100" data-placeholder="Placeholder" multiple=""
+                        option
+                        option 1st filter
+                        option 2nd filter
+                        option 3rd filter
+                  form action="/file-upload" class="dropzone-custom js-dropzone-custom-2"
+                    div.dropzone-custom__default.js-dropzone-custom__default-2
+                      span.dropzone-custom__default-icon
+                        img src="images/icons/folder-cloud.svg"
+                      span.dropzone-custom__default-message
+                        span Download
+                        | or drop file here
+                      span.dropzone-custom__default-note pdf, xlsx, png, jpg
+                      span.dropzone-custom__default-note Max size — 100 Mb
+                    div.dropzone-previews.js-dropzone-previews-2
+                  button.edit-content__remove-container type="button"
+                    i class="fas fa-times"
+                div.edit-content__form-btns
+                  button.add-btn type="button"
+                    span.add-btn__icon
+                      i class="fas fa-plus"
+                    span.add-btn__text Add Document
+                  button.add-btn type="button"
+                    span.add-btn__icon
+                      i class="fas fa-plus"
+                    span.add-btn__text Add Photo
+                  button.add-btn type="button"
+                    span.add-btn__icon
+                      i class="fas fa-plus"
+                    span.add-btn__text Add Document (internal)
+                  button.add-btn type="button"
+                    span.add-btn__icon
+                      i class="fas fa-plus"
+                    span.add-btn__text Add Attachment (internal)
+            div.content-box
+              .content-box__header
+                h2 Skills
+              .content-box__body
+                h2 Document
+                div.edit-content__container
+                  h2 Degree
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label Subject
+                      select class="chosen-select drop-left drop-to-bottom grey chosen-select--outlined width-100" data-placeholder="Placeholder" multiple=""
+                        option
+                        option 1st filter
+                        option 2nd filter
+                        option 3rd filter
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label Grade
+                      select class="chosen-select drop-left drop-to-bottom grey chosen-select--outlined width-100" data-placeholder="Placeholder" multiple=""
+                        option
+                        option 1st filter
+                        option 2nd filter
+                        option 3rd filter
+                  input type="checkbox" class="check-btn" id="check02" checked="checked"
+                  label for="check02" Delete
+                  button.edit-content__remove-container type="button"
+                    i class="fas fa-times"
+                div.edit-content__form-btns
+                  button.add-btn type="button"
+                    span.add-btn__icon
+                      i class="fas fa-plus"
+                    span.add-btn__text Add Degree
+                  button.add-btn type="button"
+                    span.add-btn__icon
+                      i class="fas fa-plus"
+                    span.add-btn__text Add Language
+                  button.add-btn type="button"
+                    span.add-btn__icon
+                      i class="fas fa-plus"
+                    span.add-btn__text Add Other skill
+            div.content-box
+              .content-box__header
+                h2 Background
+              .content-box__body
+                div.edit-content__container
+                  h2 Degree
+                  div.edit-content__form-row
+                    div.edit-content__form-col-6
+                      label for="input106" From
+                      div.input-wrap
+                        input type="text" class="js-datepicker text-field text-field--outlined" id="input106" value="01.01.2021"
+                    div.edit-content__form-col-6
+                      label for="input105" To
+                      div.input-wrap
+                        input type="text" class="js-datepicker text-field text-field--outlined" id="input105" value="01.01.2021"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label Name of institution
+                      textarea placeholder="Textarea placeholder"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label Course
+                      textarea placeholder="Textarea placeholder"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label Field
+                      textarea placeholder="Textarea placeholder"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label Type of educational institution
+                      textarea placeholder="Textarea placeholder"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label Grade
+                      div.input-wrap
+                        input type="text" class="js-clearable-input text-field text-field--outlined" placeholder="Placeholder"
+                  br
+                  h2 Completed
+                  ul.check-list.check-list--horizontal
+                    li
+                      input type="radio" class="radio-btn" id="radio101" name="radio-list-3" checked="checked"
+                      label for="radio101" Yes
+                    li
+                      input type="radio" class="radio-btn" id="radio102" name="radio-list-3"
+                      label for="radio102" No
+                  button.edit-content__remove-container type="button"
+                    i class="fas fa-times"
+                div.edit-content__form-btns
+                  button.add-btn type="button"
+                    span.add-btn__icon
+                      i class="fas fa-plus"
+                    span.add-btn__text Add Education
+                  button.add-btn type="button"
+                    span.add-btn__icon
+                      i class="fas fa-plus"
+                    span.add-btn__text Add Previous Employment
+            div.content-box
+              .content-box__header
+                h2 Links
+              .content-box__body
+                div.edit-content__container
+                  h2 Social network
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label Link-URL
+                      div.input-wrap
+                        input type="text" class="js-clearable-input text-field text-field--outlined" placeholder="Placeholder"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label Name
+                      div.input-wrap
+                        input type="text" class="js-clearable-input text-field text-field--outlined" placeholder="Placeholder"
+                  button.edit-content__remove-container type="button"
+                    i class="fas fa-times"
+                div.edit-content__form-btns
+                  button.add-btn type="button"
+                    span.add-btn__icon
+                      i class="fas fa-plus"
+                    span.add-btn__text Add Social link
+            div.content-box
+              .content-box__header
+                h2 Observers
+              .content-box__body
+                div.edit-content__form-section
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label for="input23" Recruiter
+                      div.input-wrap
+                        input type="text" id="input23" class="js-clearable-input text-field text-field--outlined" placeholder="Placeholder"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label for="input24" Manager
+                      div.input-wrap
+                        input type="text" id="input24" class="js-clearable-input text-field text-field--outlined" placeholder="Placeholder"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label for="input25" Works Council
+                      div.input-wrap
+                        input type="text" id="input25" class="js-clearable-input text-field text-field--outlined" placeholder="Placeholder"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label for="input26" Disability representative
+                      div.input-wrap
+                        input type="text" id="input26" class="js-clearable-input text-field text-field--outlined" placeholder="Placeholder"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label for="input27" Free observer 1
+                      div.input-wrap
+                        input type="text" id="input27" class="js-clearable-input text-field text-field--outlined" placeholder="Placeholder"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label for="input28" Free observer 2
+                      div.input-wrap
+                        input type="text" id="input28" class="js-clearable-input text-field text-field--outlined" placeholder="Placeholder"
+                        button.clear-input type="button"
+                          i class="fas fa-times"
+            div.content-box
+              .content-box__header
+                h2 Origin
+              .content-box__body
+                div.edit-content__form-section
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label Origin
+                      select class="chosen-select drop-left grey chosen-select--outlined width-100" data-placeholder="Please select"
+                        option Origin
+                        option Origin 2
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label Applied through
+                      select class="chosen-select drop-left grey chosen-select--outlined width-100" data-placeholder="Please select"
+                        option Applied through
+                        option Applied through 2
+            div.content-box
+              .content-box__header
+                h2 Questionnaire online application
+              .content-box__body
+                h2 General questions
+                div.edit-content__form-row
+                  div.edit-content__form-col-12
+                    label Haben Sie einen Führerschein der Klasse B?
+                    select class="chosen-select drop-left grey chosen-select--outlined width-100" data-placeholder="Please select"
+                      option Applied through
+                      option Applied through 2
+                h2 Wie sind Sie auf uns aufmerksam geworden?
+                ul.check-list
+                  li
+                    input type="radio" class="radio-btn" id="radio01" name="radio-list-1" checked="checked"
+                    label for="radio01" Agentur für Arbeit
+                  li
+                    input type="radio" class="radio-btn" id="radio02" name="radio-list-1"
+                    label for="radio02" Fachzeitschrift
+                  li
+                    input type="radio" class="radio-btn" id="radio03" name="radio-list-1"
+                    label for="radio03" Freunde/Bekannte
+                  li
+                    input type="radio" class="radio-btn" id="radio04" name="radio-list-1"
+                    label for="radio04" Hochschulevents
+                  li
+                    input type="radio" class="radio-btn" id="radio05" name="radio-list-1"
+                    label for="radio05" Personalvermittlung
+            div.content-box
+              .content-box__header
+                h2 Rejection reason
+              .content-box__body
+                div.edit-content__form-section
+                  div.edit-content__form-row
+                    div.edit-content__form-col-12
+                      label Rejection reason
+                      select class="chosen-select drop-left grey chosen-select--outlined width-100" data-placeholder="Please select"
+                        option Rejection reason
+                        option Rejection reason 2
+            div.content-box
+              .content-box__header
+                h2 CVlizer
+              .content-box__body
+                h2 Wie sind Sie auf uns aufmerksam geworden?
+                ul.check-list
+                  li
+                    input type="radio" class="radio-btn" id="radio06" name="radio-list-2" checked="checked"
+                    label for="radio06" Agentur für Arbeit
+                  li
+                    input type="radio" class="radio-btn" id="radio07" name="radio-list-2"
+                    label for="radio07" Fachzeitschrift
+            div.content-box
+              .content-box__header
+                h2 Availability For Other Vacancies
+              .content-box__body
+                input type="checkbox" class="check-btn" id="check01" checked="checked"
+                label for="check01" I accept that my application may also be considered for other jobs fitting my profile.
+            div.edit-content__form-footer
+              buttton.btn.btn-outline-secondary type="button" Cancel
+              buttton.btn.btn-primary type="button" Save changes
+              buttton.btn.btn-primary type="button" Save and return
+
+    footer.footer
+      div.footer-content
+        div.footer-logo-wrap
+          a target="_blank" class="footer-logo" href="#"
+            img src="images/mhm-logo2.svg" alt="Logo small"
+          ul.footer-main-links
+            li
+              a href="#" MHM Systemhaus Gmbh
+            li
+              a href="#" Impressum
+        div.footer-additional-info
+          span.app-version v.9.28.12
+      span.copyright-text &copy; Copyright 2021
+
+
+
+    script src="js/jquery-3.6.0.min.js"
+    script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"
+    script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"
+    script src="js/application-menu.js"
+    script src="js/tabs.js"
+    script src="js/chosen.jquery.min.js"
+    script src="js/chosen-init.js"
+    script src="js/search.js"
+    script src="js/applicants-table.js"
+    script src="js/applicants-filter.js"
+    script src="js/forms.js"
+    script src="js/popups.js"

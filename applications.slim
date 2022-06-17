@@ -1,0 +1,1012 @@
+doctype html
+html lang="en"
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    title MHM-HR Applications
+
+    / Fonts
+    link rel="preconnect" href="https://fonts.gstatic.com"
+    link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"
+
+    / Styles
+    link rel="stylesheet" href="css/normalize.css" media="all"
+    link rel="stylesheet" href="css/bootstrap-grid.css" media="all"
+    link rel="stylesheet" href="css/chosen.min.css" media="all"
+    link rel="stylesheet" href="scss/global/bootstrap/bootstrap.css" media="all"
+    link rel="stylesheet" href="css/all.css" media="all"
+    link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous"
+
+  body
+    header.header.new-style
+      .logo-wrap
+        a.logo href="/"
+          img id="corporate-logo" src="images/mhm-logo.svg" alt="Corporate logo"
+
+      #application-menu
+        a.nav-mobile-opener href="#"
+          i class="fas fa-bars"
+        div.nav-mobile-overlay
+        div.nav-wrap
+          a.nav-mobile-close
+            i class="fas fa-times"
+          span.nav-mobile-logo
+            img src="images/mhm-logo.svg" alt="Corporate logo"
+          span.nav-title Menu
+          ul.nav
+            li
+              a href="#show-mobile-nav" Dashboardfa sd fa dfasdf asdf asdf
+            li
+              a href="#show-mobile-nav" Personnel asdf asdfasdf af asdfas dfas f
+            li.dropdown.current
+              a href="#show-mobile-nav"
+                span Applications
+                span class="fas fa-chevron-down drop-arrow"
+              ul.sub-nav.popup-content
+                li
+                  a href="/staff/job_applications" Applications
+                li
+                  a href="/staff/messages" Communication
+            li
+              a href="/staff/pool_applications" Talent Pool
+            li
+              a href="/staff/events" Events
+
+      .header-info
+        .user-settings.popup-holder
+          .user-settings__opener
+            i class="fas fa-user-cog"
+            span.item-counter 5
+          div.popup-content
+            span.roles-title
+              span.roles-title__label You have
+              span.roles-title__roles-number 5 roles
+            select class="chosen-select drop-left"
+              option Admin
+              option Admin
+
+        ul.actions.user-actions
+          li
+            a.icon.icon-search.js-search-opener href="#"
+              i class="fas fa-search"
+            div.search-drop.js-search-drop
+              form
+                div.search-drop__content
+                  div.search-drop__input-wrap
+                    i class="fas fa-search search-drop__field-icon"
+                    input type="text" placeholder="Search" class="search-drop__text-field"
+                    button.search-drop__submit
+                      i class="fas fa-chevron-down"
+                  a.search-drop__close.js-search-opener href="#"
+                    i class="fas fa-times"
+
+          li.popup-holder
+            a.icon.icon-settings href="#"
+              i class="fas fa-cog"
+            div.popup-content.popup-content--pos-right.popoup-settings
+              h2 Administrations
+              ul.settings-menu
+                li
+                  a href="#" Application form
+                li
+                  a href="#" Assets
+                li
+                  a href="#" Configutation Import/Export
+                li
+                  a href="#" Custom value
+                li
+                  a href="#" Process duration
+                li
+                  a href="#" Publication Channels
+                li
+                  a href="#" Question Categories
+                li
+                  a href="#" Question
+                li
+                  a href="#" Security logs
+                li
+                  a href="#" System Configuration
+                li
+                  a href="#" Templates
+                li
+                  a href="#" User Translations
+                li
+                  a href="#" Users
+          li
+            a.icon.icon-notifications href="#"
+              i class="far fa-bell"
+              span.item-counter 5
+          li
+            a.icon.icon-notifications href="#"
+              i class="fas fa-question"
+
+        .user-logo.popup-holder
+          div.user-logo__text DR
+          div class="popup-content popup-content--pos-right user-popup"
+            div.user-popup__header
+              span.user-popup__brand-name MHMeRECRUTING
+              span.user-popup__user-name Prof. Dr. Hg. Admin. Admin
+              div.lang-select
+                a href="#" class="active-language" DE
+                a href="#" ENG
+            hr
+            div.user-popup__row
+              a.user-popup__link href="#"
+                span.user-popup__link-icon
+                  i class="far fa-user-circle"
+                span.user-popup__link-title Profile
+            div.user-popup__row
+              a.user-popup__link href="#"
+                span.user-popup__link-icon
+                  i class="fas fa-cog"
+                span.user-popup__link-title Settings
+            hr
+            div.user-popup__row
+              a.user-popup__link href="#"
+                span.user-popup__link-icon
+                  i class="fas fa-sign-out-alt"
+                span.user-popup__link-title Log out
+              span.user-popup__log-counter 18 min
+
+    main.main
+      .intro-info.new-style
+        .content-holder
+          div.intro-filters-info
+            span.intro-filters-info__results 1436 Applications
+            div.intro-filters-info__opener-wrap
+              button.intro-filters-info__filter-opener type="button" Advanced filter
+          div.intro-actions-col
+            div.intro-actions
+              ul
+                li
+                  a href="#"
+                    i class="fas fa-sliders-h"
+                li
+                  a href="#"
+                    i class="fas fa-filter"
+                li
+                  a href="#"
+                    i class="fas fa-chart-bar"
+                li
+                  a href="#"
+                    i class="fas fa-cog"
+              a class="toggle-link btn btn-primary h_ml-28 new-application-btn" href="#" data-toggle="modal" data-target="#new-applications-modal"
+                span.icon
+                  i class="fas fa-plus d-block"
+                span.text New Application
+
+      .applicants-table-section
+        .applicants-table-section__frame.js-filter-parent.active
+          .table-filter
+            .rd-new-fields-popup.custom-scrollbar
+              a.rd-btn-back.js-back-to-filters href="#"
+                i class="fas fa-arrow-left"
+                span Back to filter
+              hr
+              div.rd-new-fields-popup__content
+                .rd-content-search.h_mb-25
+                  form
+                    .rd-content-search__row
+                      input.rd-content-search__text type="text" placeholder="Search..."
+                      button.rd-content-search__submit type="button"
+                        i class="fas fa-search"
+                ul.rd-new-fields-popup__list
+                  li.rd-new-fields-popup__list-item
+                    input.rd-new-fields-popup__list-checkbox id="check01" type="checkbox"
+                    label.rd-new-fields-popup__list-label for="check01"
+                      span Applicant assessment
+                      i class="fas fa-check"
+                  li.rd-new-fields-popup__list-item
+                    input.rd-new-fields-popup__list-checkbox id="check02" type="checkbox"
+                    label.rd-new-fields-popup__list-label for="check02"
+                      span Company
+                      i class="fas fa-check"
+                  li.rd-new-fields-popup__list-item
+                    input.rd-new-fields-popup__list-checkbox id="check03" type="checkbox"
+                    label.rd-new-fields-popup__list-label for="check03"
+                      span Council review
+                      i class="fas fa-check"
+                  li.rd-new-fields-popup__list-item
+                    input.rd-new-fields-popup__list-checkbox id="check04" type="checkbox"
+                    label.rd-new-fields-popup__list-label for="check04"
+                      span Created older than
+                      i class="fas fa-check"
+                  li.rd-new-fields-popup__list-item
+                    input.rd-new-fields-popup__list-checkbox id="check05" type="checkbox"
+                    label.rd-new-fields-popup__list-label for="check05"
+                      span Event: Date exceeded
+                      i class="fas fa-check"
+                  li.rd-new-fields-popup__list-item
+                    input.rd-new-fields-popup__list-checkbox id="check06" type="checkbox"
+                    label.rd-new-fields-popup__list-label for="check06"
+                      span Created On
+                      i class="fas fa-check"
+                  li.rd-new-fields-popup__list-item
+                    input.rd-new-fields-popup__list-checkbox id="check07" type="checkbox"
+                    label.rd-new-fields-popup__list-label for="check07"
+                      span Disabilities
+                      i class="fas fa-check"
+                  li.rd-new-fields-popup__list-item
+                    input.rd-new-fields-popup__list-checkbox id="check08" type="checkbox"
+                    label.rd-new-fields-popup__list-label for="check08"
+                      span Event Date exceeded
+                      i class="fas fa-check"
+                  li.rd-new-fields-popup__list-item
+                    input.rd-new-fields-popup__list-checkbox id="check09" type="checkbox"
+                    label.rd-new-fields-popup__list-label for="check09"
+                      span Language
+                      i class="fas fa-check"
+                  li.rd-new-fields-popup__list-item
+                    input.rd-new-fields-popup__list-checkbox id="check10" type="checkbox"
+                    label.rd-new-fields-popup__list-label for="check10"
+                      span Next Steps
+                      i class="fas fa-check"
+                  li.rd-new-fields-popup__list-item
+                    input.rd-new-fields-popup__list-checkbox id="check11" type="checkbox"
+                    label.rd-new-fields-popup__list-label for="check11"
+                      span Participation Status
+                      i class="fas fa-check"
+                  li.rd-new-fields-popup__list-item
+                    input.rd-new-fields-popup__list-checkbox id="check12" type="checkbox"
+                    label.rd-new-fields-popup__list-label for="check12"
+                      span Online Questions
+                      i class="fas fa-check"
+                  li.rd-new-fields-popup__list-item
+                    input.rd-new-fields-popup__list-checkbox id="check13" type="checkbox"
+                    label.rd-new-fields-popup__list-label for="check13"
+                      span Recruiter
+                      i class="fas fa-check"
+                  li.rd-new-fields-popup__list-item
+                    input.rd-new-fields-popup__list-checkbox id="check14" type="checkbox"
+                    label.rd-new-fields-popup__list-label for="check14"
+                      span Status
+                      i class="fas fa-check"
+                  li.rd-new-fields-popup__list-item
+                    input.rd-new-fields-popup__list-checkbox id="check15" type="checkbox"
+                    label.rd-new-fields-popup__list-label for="check15"
+                      span Type
+                      i class="fas fa-check"
+                  li.rd-new-fields-popup__list-item
+                    input.rd-new-fields-popup__list-checkbox id="check16" type="checkbox"
+                    label.rd-new-fields-popup__list-label for="check16"
+                      span Tags
+                      i class="fas fa-check"
+
+            .table-filter__holder.custom-scrollbar
+              .table-filter__row.table-filter__row--header
+                h2 Filter
+                button.reset-all Reset All
+              .table-filter__row
+                button.add-new-field.js-add-new-fields-opener
+                  i class="fas fa-plus"
+                  span Add new Field
+              .table-filter__row.table-filter__row--v-offset-24
+                .table-filter__group
+                  span.table-filter__field-title
+                    span.table-filter__field-title-text Apply filter
+                  select class="chosen-select drop-left drop-to-top grey chosen-select--outlined" data-placeholder="Please select"
+                    option 1st filter
+                    option 2nd filter
+                    option 3rd filter
+                .table-filter__group
+                  span.table-filter__field-title
+                    span.table-filter__field-title-text Applicant assessment
+                  div.check-text-group
+                    input.radio type="radio" name="radio1" id="radio1"
+                    label for="radio1" My reviews
+                    input.radio type="radio" name="radio1" id="radio2"
+                    label for="radio2" Reviews present
+                .table-filter__group
+                  span.table-filter__field-title
+                    span.table-filter__field-title-text Company
+                  span.table-filter__field-title
+                    span.table-filter__field-title-text Created older than
+                  select class="chosen-select drop-left drop-to-bottom grey chosen-select--outlined" data-placeholder="Pick from a list" multiple=""
+                    option
+                    option 1st filter
+                    option 2nd filter
+                    option 3rd filter
+                .table-filter__group
+                  span.table-filter__field-title
+                    span.table-filter__field-title-text Event: Date exceeded
+                  select class="chosen-select drop-left drop-to-top grey chosen-select--outlined" data-placeholder="Please select"
+                    option Deadline
+                    option Deadline 2
+                    option Deadline 3
+                .table-filter__group
+                  span.table-filter__field-title
+                    span.table-filter__field-title-text Type
+                  select class="chosen-select drop-left drop-to-top grey chosen-select--outlined" data-placeholder="Please select"
+                    option Job Application/Standart
+                    option Job Application/Standart 2
+                    option Job Application/Standart 3
+                .table-filter__group
+                  span.table-filter__field-title
+                    span.table-filter__field-title-text Participation Status
+                  div.check-text-group
+                    input.radio type="radio" name="radio2" id="radio3"
+                    label for="radio3" Invited
+                    input.radio type="radio" name="radio2" id="radio4"
+                    label for="radio4" Not invited
+                .table-filter__group
+                  span.table-filter__field-title
+                    span.table-filter__field-title-text Status
+                  select class="chosen-select drop-left drop-to-bottom grey chosen-select--outlined" data-placeholder="Pick from a list" multiple=""
+                    option
+                    option 1st filter
+                    option 2nd filter
+                    option 3rd filter
+              .table-filter__row
+                span class="table-filter__field-title"
+                  span class="table-filter__field-title-icon"
+                    i class="far fa-save"
+                  span class="table-filter__field-title-text" Save filer
+                div.table-filter__file-name
+                  input type="text" placeholder="Filter name" class="text-field text-field--outlined"
+                  button.table-filter__create Create
+                ul.tags-list
+                  li.tags-list__item
+                    span.tags-list__item-text 1st filter
+                    button type="button" class="tags-list__item-close"
+                  li.tags-list__item
+                    span.tags-list__item-text 2nd filter
+                    button type="button" class="tags-list__item-close"
+          div.selected-filters
+            ul.selected-filters__list
+              li.selected-filters__list-item
+                span.selected-filters__item
+                  span.selected-filters__item-text
+                    span Applicant assessment:
+                    b My reviews
+                  button.selected-filters__item-close type="button"
+              li.selected-filters__list-item
+                span.selected-filters__item
+                  span.selected-filters__item-text
+                    span Company:
+                    b Agency
+                  button.selected-filters__item-close type="button"
+              li.selected-filters__list-item
+                span.selected-filters__item
+                  span.selected-filters__item-text
+                    span Created older than:
+                    b 2 selected
+                  button.selected-filters__item-close type="button"
+            button.reset-all Reset All
+          div.applicants-table-wrap
+            table.applicants-table
+              thead
+                tr
+                  th.applicants-table__check-cell
+                    input.checkbox.check-all.partly type="checkbox" id="table-check00"
+                      label for="table-check00"
+                  th.applicants-table__id-cell
+                    span.applicants-table__sortable-head ID
+                  th.applicants-table__applicant-cell
+                    span.applicants-table__sortable-head.desc Applicant
+                  th.applicants-table__vacancy-cell
+                    span.applicants-table__sortable-head.desc Vacancy
+                  th.applicants-table__salary-cell
+                    span.applicants-table__sortable-head.desc Desired Salary
+                  th.applicants-table__status-cell
+                    span.applicants-table__sortable-head Status
+                  th.applicants-table__average-cell
+                    span.applicants-table__sortable-head Average
+                  th.applicants-table__interviews-cell
+                    span.applicants-table__sortable-head No of Interviews
+                  th.applicants-table__last-update-cell
+                    span.cell-holder Last update
+              tbody
+                tr.js-row
+                  td.applicants-table__check-cell
+                    input.checkbox.js-check-row type="checkbox" id="table-check01"
+                    label for="table-check01"
+                    a.edit href="#"
+                      i class="fas fa-pen"
+                  td.applicants-table__id-cell 2345
+                  td.applicants-table__applicant-cell
+                    div.applicants-table__applicant
+                      div.applicants-table__applicant-avatar
+                        img src="images/avatar.jpg"
+                      div.applicants-table__edit-info
+                        div.applicants-table__edit-info-header
+                          a.applicants-table__applicant-name href="#" Natali, Stone
+                        div.applicants-table__additional-info
+                          div.messages-count
+                            div.messages-count__icon
+                              i class="far fa-envelope"
+                            div.messages-count__counter 134
+                          div.applicants-table__user-checked
+                            i class="fas fa-user-check"
+
+                  td.applicants-table__vacancy-cell
+                    a href="#" Webdeveloper Ruby on Rails (f/md/d)
+                  td.applicants-table__salary-cell 65.000
+                  td.applicants-table__status-cell
+                    span.status-item.contract-offered Contract offered
+                  td.applicants-table__average-cell
+                    div class="rating-box"
+                      span class="rating"
+                        span class="value" 4
+                        i class="fas fa-star"
+                      a class="amount" href="#" (679)
+                  td.applicants-table__interviews-cell 4
+                  td.applicants-table__last-update-cell 30.12.2020
+                tr.js-row
+                  td.applicants-table__check-cell
+                    input.checkbox.js-check-row type="checkbox" id="table-check02"
+                    label for="table-check02"
+                    a.edit href="#"
+                      i class="fas fa-pen"
+                  td.applicants-table__id-cell 2345
+                  td.applicants-table__applicant-cell
+                    div.applicants-table__applicant
+                      div.applicants-table__applicant-avatar
+                        img src="images/avatar.jpg"
+                      div.applicants-table__edit-info
+                        div.applicants-table__edit-info-header
+                          a.applicants-table__applicant-name href="#" Natali, Stone
+                          span.applicants-table__applicant-name-counter &lpar;112&rpar;
+                        div.applicants-table__additional-info
+                          div.messages-count
+                            div.messages-count__icon
+                              i class="far fa-envelope"
+                            div.messages-count__counter 134
+                          div.applicants-table__user-checked
+                            i class="fas fa-user-check"
+
+                  td.applicants-table__vacancy-cell
+                    a href="#" Webdeveloper Ruby on Rails (f/md/d)
+                  td.applicants-table__salary-cell 65.000
+                  td.applicants-table__status-cell
+                    span.status-item.rejected Rejected
+                  td.applicants-table__average-cell
+                    div class="rating-box"
+                      span class="rating"
+                        span class="value" 4
+                        i class="fas fa-star"
+                      a class="amount" href="#" (679)
+                  td.applicants-table__interviews-cell 4
+                  td.applicants-table__last-update-cell 30.12.2020
+                tr.js-row
+                  td.applicants-table__check-cell
+                    input.checkbox.js-check-row type="checkbox" id="table-check03"
+                    label for="table-check03"
+                    a.edit href="#"
+                      i class="fas fa-pen"
+                  td.applicants-table__id-cell 2345
+                  td.applicants-table__applicant-cell
+                    div.applicants-table__applicant
+                      div.applicants-table__applicant-avatar
+                        img src="images/avatar.jpg"
+                      div.applicants-table__edit-info
+                        div.applicants-table__edit-info-header
+                          a.applicants-table__applicant-name href="#" Rosenstiel, Alexandra
+                          span.applicants-table__applicant-name-counter &lpar;23&rpar;
+                        div.applicants-table__additional-info
+                          div.messages-count
+                            div.messages-count__icon
+                              i class="far fa-envelope"
+                            div.messages-count__counter 134
+                          div.applicants-table__user-checked
+                            i class="fas fa-user-check"
+
+                  td.applicants-table__vacancy-cell
+                    a href="#" Webdeveloper Ruby on Rails (f/md/d)
+                  td.applicants-table__salary-cell 65.000
+                  td.applicants-table__status-cell
+                    span.status-item.new New w/o confirmation
+                  td.applicants-table__average-cell
+                    div class="rating-box"
+                      span class="rating"
+                        span class="value" 4
+                        i class="fas fa-star"
+                      a class="amount" href="#" (679)
+                  td.applicants-table__interviews-cell 4
+                  td.applicants-table__last-update-cell 30.12.2020
+                tr.js-row
+                  td.applicants-table__check-cell
+                    input.checkbox.js-check-row type="checkbox" id="table-check04"
+                    label for="table-check04"
+                    a.edit href="#"
+                      i class="fas fa-pen"
+                  td.applicants-table__id-cell 2345
+                  td.applicants-table__applicant-cell
+                    div.applicants-table__applicant
+                      div.applicants-table__applicant-avatar RA
+                      div.applicants-table__edit-info
+                        div.applicants-table__edit-info-header
+                          a.applicants-table__applicant-name href="#" Rosenstiel, Alexandra
+                          span.applicants-table__applicant-name-counter &lpar;23&rpar;
+                        div.applicants-table__additional-info
+                          div.messages-count
+                            div.messages-count__icon
+                              i class="far fa-envelope"
+                            div.messages-count__counter 134
+                          div.applicants-table__user-checked
+                            i class="fas fa-user-check"
+
+                  td.applicants-table__vacancy-cell
+                    a href="#" Webdeveloper Ruby on Rails (f/md/d)
+                  td.applicants-table__salary-cell 65.000
+                  td.applicants-table__status-cell
+                    span.status-item.interview Interview
+                  td.applicants-table__average-cell
+                    div class="rating-box"
+                      span class="rating"
+                        span class="value" 4
+                        i class="fas fa-star"
+                      a class="amount" href="#" (679)
+                  td.applicants-table__interviews-cell 4
+                  td.applicants-table__last-update-cell 30.12.2020
+                tr.js-row
+                  td.applicants-table__check-cell
+                    input.checkbox.js-check-row type="checkbox" id="table-check05"
+                    label for="table-check05"
+                    a.edit href="#"
+                      i class="fas fa-pen"
+                  td.applicants-table__id-cell 2345
+                  td.applicants-table__applicant-cell
+                    div.applicants-table__applicant
+                      div.applicants-table__applicant-avatar
+                        img src="images/avatar.jpg"
+                      div.applicants-table__edit-info
+                        div.applicants-table__edit-info-header
+                          a.applicants-table__applicant-name href="#" Natali, Stone
+                        div.applicants-table__additional-info
+                          div.messages-count
+                            div.messages-count__icon
+                              i class="far fa-envelope"
+                            div.messages-count__counter 134
+                          div.applicants-table__user-checked
+                            i class="fas fa-user-check"
+
+                  td.applicants-table__vacancy-cell
+                    a href="#" Webdeveloper Ruby on Rails (f/md/d)
+                  td.applicants-table__salary-cell 65.000
+                  td.applicants-table__status-cell
+                    span.status-item.contract-offered Contract offered
+                  td.applicants-table__average-cell
+                    div class="rating-box"
+                      span class="rating"
+                        span class="value" 4
+                        i class="fas fa-star"
+                      a class="amount" href="#" (679)
+                  td.applicants-table__interviews-cell 4
+                  td.applicants-table__last-update-cell 30.12.2020
+                tr.js-row
+                  td.applicants-table__check-cell
+                    input.checkbox.js-check-row type="checkbox" id="table-check06"
+                    label for="table-check06"
+                    a.edit href="#"
+                      i class="fas fa-pen"
+                  td.applicants-table__id-cell 2345
+                  td.applicants-table__applicant-cell
+                    div.applicants-table__applicant
+                      div.applicants-table__applicant-avatar
+                        img src="images/avatar.jpg"
+                      div.applicants-table__edit-info
+                        div.applicants-table__edit-info-header
+                          a.applicants-table__applicant-name href="#" Natali, Stone
+                          span.applicants-table__applicant-name-counter &lpar;112&rpar;
+                        div.applicants-table__additional-info
+                          div.messages-count
+                            div.messages-count__icon
+                              i class="far fa-envelope"
+                            div.messages-count__counter 134
+                          div.applicants-table__user-checked
+                            i class="fas fa-user-check"
+
+                  td.applicants-table__vacancy-cell
+                    a href="#" Webdeveloper Ruby on Rails (f/md/d)
+                  td.applicants-table__salary-cell 65.000
+                  td.applicants-table__status-cell
+                    span.status-item.rejected Rejected
+                  td.applicants-table__average-cell
+                    div class="rating-box"
+                      span class="rating"
+                        span class="value" 4
+                        i class="fas fa-star"
+                      a class="amount" href="#" (679)
+                  td.applicants-table__interviews-cell 4
+                  td.applicants-table__last-update-cell 30.12.2020
+                tr.js-row
+                  td.applicants-table__check-cell
+                    input.checkbox.js-check-row type="checkbox" id="table-check07"
+                    label for="table-check07"
+                    a.edit href="#"
+                      i class="fas fa-pen"
+                  td.applicants-table__id-cell 2345
+                  td.applicants-table__applicant-cell
+                    div.applicants-table__applicant
+                      div.applicants-table__applicant-avatar
+                        img src="images/avatar.jpg"
+                      div.applicants-table__edit-info
+                        div.applicants-table__edit-info-header
+                          a.applicants-table__applicant-name href="#" Rosenstiel, Alexandra
+                          span.applicants-table__applicant-name-counter &lpar;23&rpar;
+                        div.applicants-table__additional-info
+                          div.messages-count
+                            div.messages-count__icon
+                              i class="far fa-envelope"
+                            div.messages-count__counter 134
+                          div.applicants-table__user-checked
+                            i class="fas fa-user-check"
+
+                  td.applicants-table__vacancy-cell
+                    a href="#" Webdeveloper Ruby on Rails (f/md/d)
+                  td.applicants-table__salary-cell 65.000
+                  td.applicants-table__status-cell
+                    span.status-item.new New w/o confirmation
+                  td.applicants-table__average-cell
+                    div class="rating-box"
+                      span class="rating"
+                        span class="value" 4
+                        i class="fas fa-star"
+                      a class="amount" href="#" (679)
+                  td.applicants-table__interviews-cell 4
+                  td.applicants-table__last-update-cell 30.12.2020
+                tr.js-row
+                  td.applicants-table__check-cell
+                    input.checkbox.js-check-row type="checkbox" id="table-check08"
+                    label for="table-check08"
+                    a.edit href="#"
+                      i class="fas fa-pen"
+                  td.applicants-table__id-cell 2345
+                  td.applicants-table__applicant-cell
+                    div.applicants-table__applicant
+                      div.applicants-table__applicant-avatar RA
+                      div.applicants-table__edit-info
+                        div.applicants-table__edit-info-header
+                          a.applicants-table__applicant-name href="#" Rosenstiel, Alexandra
+                          span.applicants-table__applicant-name-counter &lpar;23&rpar;
+                        div.applicants-table__additional-info
+                          div.messages-count
+                            div.messages-count__icon
+                              i class="far fa-envelope"
+                            div.messages-count__counter 134
+                          div.applicants-table__user-checked
+                            i class="fas fa-user-check"
+
+                  td.applicants-table__vacancy-cell
+                    a href="#" Webdeveloper Ruby on Rails (f/md/d)
+                  td.applicants-table__salary-cell 65.000
+                  td.applicants-table__status-cell
+                    span.status-item.interview Interview
+                  td.applicants-table__average-cell
+                    div class="rating-box"
+                      span class="rating"
+                        span class="value" 4
+                        i class="fas fa-star"
+                      a class="amount" href="#" (679)
+                  td.applicants-table__interviews-cell 4
+                  td.applicants-table__last-update-cell 30.12.2020
+                tr.js-row
+                  td.applicants-table__check-cell
+                    input.checkbox.js-check-row type="checkbox" id="table-check09"
+                    label for="table-check09"
+                    a.edit href="#"
+                      i class="fas fa-pen"
+                  td.applicants-table__id-cell 2345
+                  td.applicants-table__applicant-cell
+                    div.applicants-table__applicant
+                      div.applicants-table__applicant-avatar
+                        img src="images/avatar.jpg"
+                      div.applicants-table__edit-info
+                        div.applicants-table__edit-info-header
+                          a.applicants-table__applicant-name href="#" Natali, Stone
+                        div.applicants-table__additional-info
+                          div.messages-count
+                            div.messages-count__icon
+                              i class="far fa-envelope"
+                            div.messages-count__counter 134
+                          div.applicants-table__user-checked
+                            i class="fas fa-user-check"
+
+                  td.applicants-table__vacancy-cell
+                    a href="#" Webdeveloper Ruby on Rails (f/md/d)
+                  td.applicants-table__salary-cell 65.000
+                  td.applicants-table__status-cell
+                    span.status-item.contract-offered Contract offered
+                  td.applicants-table__average-cell
+                    div class="rating-box"
+                      span class="rating"
+                        span class="value" 4
+                        i class="fas fa-star"
+                      a class="amount" href="#" (679)
+                  td.applicants-table__interviews-cell 4
+                  td.applicants-table__last-update-cell 30.12.2020
+                tr.js-row
+                  td.applicants-table__check-cell
+                    input.checkbox.js-check-row type="checkbox" id="table-check10"
+                    label for="table-check10"
+                    a.edit href="#"
+                      i class="fas fa-pen"
+                  td.applicants-table__id-cell 2345
+                  td.applicants-table__applicant-cell
+                    div.applicants-table__applicant
+                      div.applicants-table__applicant-avatar
+                        img src="images/avatar.jpg"
+                      div.applicants-table__edit-info
+                        div.applicants-table__edit-info-header
+                          a.applicants-table__applicant-name href="#" Natali, Stone
+                          span.applicants-table__applicant-name-counter &lpar;112&rpar;
+                        div.applicants-table__additional-info
+                          div.messages-count
+                            div.messages-count__icon
+                              i class="far fa-envelope"
+                            div.messages-count__counter 134
+                          div.applicants-table__user-checked
+                            i class="fas fa-user-check"
+
+                  td.applicants-table__vacancy-cell
+                    a href="#" Webdeveloper Ruby on Rails (f/md/d)
+                  td.applicants-table__salary-cell 65.000
+                  td.applicants-table__status-cell
+                    span.status-item.rejected Rejected
+                  td.applicants-table__average-cell
+                    div class="rating-box"
+                      span class="rating"
+                        span class="value" 4
+                        i class="fas fa-star"
+                      a class="amount" href="#" (679)
+                  td.applicants-table__interviews-cell 4
+                  td.applicants-table__last-update-cell 30.12.2020
+                tr.js-row
+                  td.applicants-table__check-cell
+                    input.checkbox.js-check-row type="checkbox" id="table-check11"
+                    label for="table-check11"
+                    a.edit href="#"
+                      i class="fas fa-pen"
+                  td.applicants-table__id-cell 2345
+                  td.applicants-table__applicant-cell
+                    div.applicants-table__applicant
+                      div.applicants-table__applicant-avatar
+                        img src="images/avatar.jpg"
+                      div.applicants-table__edit-info
+                        div.applicants-table__edit-info-header
+                          a.applicants-table__applicant-name href="#" Rosenstiel, Alexandra
+                          span.applicants-table__applicant-name-counter &lpar;23&rpar;
+                        div.applicants-table__additional-info
+                          div.messages-count
+                            div.messages-count__icon
+                              i class="far fa-envelope"
+                            div.messages-count__counter 134
+                          div.applicants-table__user-checked
+                            i class="fas fa-user-check"
+
+                  td.applicants-table__vacancy-cell
+                    a href="#" Webdeveloper Ruby on Rails (f/md/d)
+                  td.applicants-table__salary-cell 65.000
+                  td.applicants-table__status-cell
+                    span.status-item.new New w/o confirmation
+                  td.applicants-table__average-cell
+                    div class="rating-box"
+                      span class="rating"
+                        span class="value" 4
+                        i class="fas fa-star"
+                      a class="amount" href="#" (679)
+                  td.applicants-table__interviews-cell 4
+                  td.applicants-table__last-update-cell 30.12.2020
+                tr.js-row
+                  td.applicants-table__check-cell
+                    input.checkbox.js-check-row type="checkbox" id="table-check12"
+                    label for="table-check12"
+                    a.edit href="#"
+                      i class="fas fa-pen"
+                  td.applicants-table__id-cell 2345
+                  td.applicants-table__applicant-cell
+                    div.applicants-table__applicant
+                      div.applicants-table__applicant-avatar RA
+                      div.applicants-table__edit-info
+                        div.applicants-table__edit-info-header
+                          a.applicants-table__applicant-name href="#" Rosenstiel, Alexandra
+                          span.applicants-table__applicant-name-counter &lpar;23&rpar;
+                        div.applicants-table__additional-info
+                          div.messages-count
+                            div.messages-count__icon
+                              i class="far fa-envelope"
+                            div.messages-count__counter 134
+                          div.applicants-table__user-checked
+                            i class="fas fa-user-check"
+
+                  td.applicants-table__vacancy-cell
+                    a href="#" Webdeveloper Ruby on Rails (f/md/d)
+                  td.applicants-table__salary-cell 65.000
+                  td.applicants-table__status-cell
+                    span.status-item.interview Interview
+                  td.applicants-table__average-cell
+                    div class="rating-box"
+                      span class="rating"
+                        span class="value" 4
+                        i class="fas fa-star"
+                      a class="amount" href="#" (679)
+                  td.applicants-table__interviews-cell 4
+                  td.applicants-table__last-update-cell 30.12.2020
+        div.pagination-wrap
+          div.category-select
+            select class="chosen-select drop-left drop-to-top grey chosen-select--outlined" data-placeholder="Please select"
+              optgroup label="Status"
+                option
+                option value="transition.job_application.state.reject" Reject
+                option value="transition.job_application.state.request_manager_review" Request manager review
+                option value="transition.job_application.state.create_interview" Create interview
+                option value="transition.job_application.state.mass_tagging" Mass tagging
+                option value="transition.job_application.state.invite_to_assessment_center" Invite to assessment center
+                option value="transition.job_application.state.offer_contract" Offer contract
+                option value="transition.job_application.state.custom_mail" Send E-Mail to applicant
+                option value="transition.job_application.state.finish_online_application" Send confirmation
+                option value="transition.job_application.state.submit_manager_review" Submit review
+              optgroup label="Council review"
+                option value="transition.job_application.council_state.set_competitor" List as competitor
+              optgroup label="Requested documents"
+                option value="transition.job_application.documents_state.request" Request documents
+              optgroup label="Disabilities"
+                option value="transition.job_application.handicapped_state.set_competitor" List as competitor
+              optgroup label="Requested questionnaire"
+                option value="transition.job_application.ass_questions_state.request" Request questionnaire to be answered
+              option value="mass_action.job_application/mass_actions/comparison_cell" Comparison
+          div.pagination-row
+            div.pagination-group
+              div.pagination
+                button type="button" class="pagination__item prev"
+                  i class="fas fa-chevron-left"
+                button type="button" class="pagination__item active" 1
+                button type="button" class="pagination__item" 2
+                button type="button" class="pagination__item" 3
+                button type="button" class="pagination__item" 4
+                button type="button" class="pagination__item" 5
+                span class="pagination__item more" ...
+                button type="button" class="pagination__item" 96
+                button type="button" class="pagination__item next"
+                  i class="fas fa-chevron-right"
+            div.pagination-group
+              span.pagination-group__label Items per page:
+              select class="chosen-select drop-right grey"
+                option 30
+                option 40
+                option 50
+            div.pagination-group
+              span.pagination-group__label To page
+              input.text-field type="text"
+    footer.footer
+      div.footer-content
+        div.footer-logo-wrap
+          a target="_blank" class="footer-logo" href="#"
+            img src="images/mhm-logo2.svg" alt="Logo small"
+          ul.footer-main-links
+            li
+              a href="#" MHM Systemhaus Gmbh
+            li
+              a href="#" Impressum
+        div.footer-additional-info
+          span.app-version v.9.28.12
+      span.copyright-text &copy; Copyright 2021
+
+    div.modal id="new-applications-modal"
+      div.modal-dialog
+        div.modal-content.rd-index-filter-modal
+          div.rd-index-filter-modal__group
+            h2 Applications
+          div.rd-index-filter-modal__group
+            div.div.rd-index-filter-modal__row
+              div.rd-index-filter-modal__col-6
+                .table-filter__group
+                  span.table-filter__field-title
+                    span.table-filter__field-title-text Apply filter
+                  select class="chosen-select drop-left grey chosen-select--outlined" data-placeholder="Column set one"
+                    option 1st filter
+                    option 2nd filter
+                    option 3rd filter
+              div.rd-index-filter-modal__col-6
+                span class="table-filter__field-title"
+                  span class="table-filter__field-title-icon"
+                    i class="far fa-save"
+                  span class="table-filter__field-title-text" Save filer
+                div.table-filter__file-name
+                  input type="text" placeholder="Column set name" class="text-field text-field--outlined"
+                  button.table-filter__create Create
+          div.rd-index-filter-modal__group
+            .rd-content-search.h_mb-18
+              form
+                .rd-content-search__row
+                  input.rd-content-search__text type="text" placeholder="Search..."
+                  button.rd-content-search__submit type="button"
+                    i class="fas fa-search"
+
+            ul.rd-new-fields-popup__list.sortable-list id="list"
+              li.rd-new-fields-popup__list-item
+                input.rd-new-fields-popup__list-checkbox id="check101" type="checkbox"
+                label.rd-new-fields-popup__list-label for="check101"
+                  span Applicant assessment
+                  i class="fas fa-check"
+              li.rd-new-fields-popup__list-item
+                input.rd-new-fields-popup__list-checkbox id="check102" type="checkbox"
+                label.rd-new-fields-popup__list-label for="check102"
+                  span Company
+                  i class="fas fa-check"
+              li.rd-new-fields-popup__list-item
+                input.rd-new-fields-popup__list-checkbox id="check103" type="checkbox"
+                label.rd-new-fields-popup__list-label for="check103"
+                  span Council review
+                  i class="fas fa-check"
+              li.rd-new-fields-popup__list-item
+                input.rd-new-fields-popup__list-checkbox id="check104" type="checkbox"
+                label.rd-new-fields-popup__list-label for="check104"
+                  span Created older than
+                  i class="fas fa-check"
+              li.rd-new-fields-popup__list-item
+                input.rd-new-fields-popup__list-checkbox id="check105" type="checkbox"
+                label.rd-new-fields-popup__list-label for="check105"
+                  span Event: Date exceeded
+                  i class="fas fa-check"
+              li.rd-new-fields-popup__list-item
+                input.rd-new-fields-popup__list-checkbox id="check106" type="checkbox"
+                label.rd-new-fields-popup__list-label for="check106"
+                  span Created On
+                  i class="fas fa-check"
+              li.rd-new-fields-popup__list-item
+                input.rd-new-fields-popup__list-checkbox id="check107" type="checkbox"
+                label.rd-new-fields-popup__list-label for="check107"
+                  span Disabilities
+                  i class="fas fa-check"
+              li.rd-new-fields-popup__list-item
+                input.rd-new-fields-popup__list-checkbox id="check108" type="checkbox"
+                label.rd-new-fields-popup__list-label for="check108"
+                  span Event Date exceeded
+                  i class="fas fa-check"
+              li.rd-new-fields-popup__list-item
+                input.rd-new-fields-popup__list-checkbox id="check109" type="checkbox"
+                label.rd-new-fields-popup__list-label for="check109"
+                  span Language
+                  i class="fas fa-check"
+              li.rd-new-fields-popup__list-item
+                input.rd-new-fields-popup__list-checkbox id="check110" type="checkbox"
+                label.rd-new-fields-popup__list-label for="check110"
+                  span Next Steps
+                  i class="fas fa-check"
+              li.rd-new-fields-popup__list-item
+                input.rd-new-fields-popup__list-checkbox id="check111" type="checkbox"
+                label.rd-new-fields-popup__list-label for="check111"
+                  span Participation Status
+                  i class="fas fa-check"
+              li.rd-new-fields-popup__list-item
+                input.rd-new-fields-popup__list-checkbox id="check112" type="checkbox"
+                label.rd-new-fields-popup__list-label for="check112"
+                  span Online Questions
+                  i class="fas fa-check"
+              li.rd-new-fields-popup__list-item
+                input.rd-new-fields-popup__list-checkbox id="check113" type="checkbox"
+                label.rd-new-fields-popup__list-label for="check113"
+                  span Recruiter
+                  i class="fas fa-check"
+              li.rd-new-fields-popup__list-item
+                input.rd-new-fields-popup__list-checkbox id="check114" type="checkbox"
+                label.rd-new-fields-popup__list-label for="check114"
+                  span Status
+                  i class="fas fa-check"
+              li.rd-new-fields-popup__list-item
+                input.rd-new-fields-popup__list-checkbox id="check115" type="checkbox"
+                label.rd-new-fields-popup__list-label for="check115"
+                  span Type
+                  i class="fas fa-check"
+              li.rd-new-fields-popup__list-item
+                input.rd-new-fields-popup__list-checkbox id="check116" type="checkbox"
+                label.rd-new-fields-popup__list-label for="check116"
+                  span Tags
+                  i class="fas fa-check"
+
+
+  script src="js/Sortable.min.js"
+  script src="js/jquery-3.6.0.min.js"
+  script src="js/application-menu.js"
+  script src="js/tabs.js"
+  script src="js/chosen.jquery.min.js"
+  script src="js/chosen-init.js"
+  script src="js/search.js"
+  script src="js/applicants-table.js"
+  script src="js/applicants-filter.js"
+  script src="js/add-new-fields.js"
+  script src="js/bootstrap/bootstrap.bundle.min.js"
+  script src="js/jquery-sortable.js"
+  script src="js/sortable-init.js"
+    script src="js/popups.js"
