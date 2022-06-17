@@ -112,8 +112,8 @@
 .intro-info {
   background: var(--background-dark);
   // New-style bridge. New design ueses 45px because content gets pulled up into the intro-info section.
-  // padding: 22px 28px 45px;
-  padding: 22px 28px 22px;
+  padding: 22px 28px 45px;
+  //padding: 22px 28px 22px;
 
   .content-holder {
     position: relative;
